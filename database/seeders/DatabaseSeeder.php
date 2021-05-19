@@ -14,6 +14,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        Service::factory(50)->create();
+        $services = Service::factory(10)->create();
+
+        foreach ($services as $service) {
+            Service::factory(rand(0, 15))->create([
+                'parent' => $service->id
+            ]);
+        }
     }
 }

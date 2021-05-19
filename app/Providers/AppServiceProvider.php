@@ -23,8 +23,5 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        if (session()->get('locale') === "en") {
-            
-        }
     }
 }

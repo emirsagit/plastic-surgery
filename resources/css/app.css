@@ -1,24 +1,24 @@
 @tailwind base;
-
 @tailwind components;
-
 @tailwind utilities;
-
 .bg-image {
     background-image: url('/img/doktor_giris.jpg');
     background-repeat: no-repeat;
     background-size: auto;
 }
- 
-[x-cloak] { display: none; }
+
+[x-cloak] {
+    display: none;
+}
 
 /* ckeditor */
+
 div.ck-editor__editable p {
     @apply py-2;
 }
 
 div.ck-editor__editable h2 {
-    @apply text-2xl; 
+    @apply text-2xl;
     @apply font-extrabold;
     @apply text-black;
     @apply mt-6;
@@ -28,14 +28,14 @@ div.ck-editor__editable h2 {
 }
 
 div.ck-editor__editable h3 {
-    @apply text-2xl; 
+    @apply text-2xl;
     @apply font-bold;
     @apply mt-4;
     @apply text-indigo-700;
 }
 
 div.ck-editor__editable h4 {
-    @apply text-xl; 
+    @apply text-xl;
     @apply font-bold;
     @apply mt-2;
     @apply text-black;
@@ -48,23 +48,43 @@ div.ck-editor__editable a {
 }
 
 .ck-editor__editable {
-    @apply text-lg; 
+    @apply text-lg;
     @apply text-gray-700;
 }
 
 .ck-editor__editable ul {
-    @apply list-disc; 
+    @apply list-disc;
     @apply my-2;
     @apply list-inside;
 }
 
 .ck-editor__editable ol {
-    @apply list-decimal; 
+    @apply list-decimal;
     @apply my-2;
     @apply list-inside;
 }
+
 /* ckeditor end */
+
 .bg-whatsapp {
     background-color: #7ad06d;
 }
 
+.bg-rhinoplasty {
+    background:#d5d6d5;
+    background-repeat: no-repeat;
+    background-size: contain cover;
+}
+
+*{
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+canvas{
+    background-color: #000;
+}

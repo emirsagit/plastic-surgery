@@ -1,9 +1,9 @@
 <?php 
 return  [
-    'tel' => '+90 555 55 55',
+    'tel' => '+90 543 345 26 77',
     'admins' => ['emirsagit@gmail.com', 'ahmetsagit@gmail.com'],
-    'languages' => ['tr', 'en', 'ar'],
-    'whatsapp' => '905511623997',
+    'languages' => ['tr', 'en'],
+    'whatsapp' => '905433452677',
     'twitterSite' => '@evdeasaglikbakim'
 ]
 

@@ -12,12 +12,13 @@
   <link href="{{ asset('css/fonts.css') }}" rel="preload">
   {{-- <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet"> --}}
   <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+  <link rel="stylesheet" href="{{ asset('css/splide.min.css') }}">
   <meta name="csrf-token" content="{{ csrf_token() }}" />
   <!-- Styles -->
   @yield('head')
 </head>
 
-<body class="text-gray-800 antialiased" x-data="{ form: false }">
+<body class="text-gray-800" x-data="{ form: false }">
   @include('layouts.partials.nav')
   @include('layouts.partials.appointmentForm')
   @include('layouts.partials.whapsappAndPhoneIcons')
@@ -36,5 +37,5 @@
         }
 </script>
 <script src="{{ asset('js/app.js') }}" defer></script>
-
+<script src="{{ asset('js/splide.min.js') }}" defer></script>
 </html>

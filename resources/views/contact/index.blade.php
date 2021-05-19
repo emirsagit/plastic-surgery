@@ -9,7 +9,6 @@
       </h1>
     </div>
   </div>
-  @include('layouts.shared.whyUsSvgs')
   <div class="px-4 pt-16 w-full">
     <div class="flex justify-center">
       <div class="w-full lg:w-6/12 px-4">

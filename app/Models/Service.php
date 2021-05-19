@@ -27,10 +27,15 @@ class Service extends Model
     public function childrenLanguages()
     {
         return $this->hasMany($this, 'language_parent');
-    } 
+    }
+
+    public function children()
+    {
+        return $this->hasMany($this, 'parent');
+    }
 
     public function parentLanguage()
     {
         return $this->hasOne($this, 'id', 'language_parent');
-    } 
+    }
 }

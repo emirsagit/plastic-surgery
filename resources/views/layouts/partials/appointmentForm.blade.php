@@ -1,7 +1,7 @@
 <div class="h-screen w-screen flex justify-center items-center fixed top-0 z-50" x-show.transition.duration.300ms="form" x-cloak>
     <div class="w-screen h-full lg:w-4/5 bg-white rounded-lg p-4 lg:px-8 overflow-auto" x-data="contactForm()">
         <div class="flex justify-between flex-row">
-            <p class="block text-gray-700 font-bold mb-1 text-xl text-center">{{ __('Online Muayene Randevusu Alın') }}
+            <p class="block text-gray-700 font-bold mb-1 text-xl text-center">{{ __('Randevu oluştur') }}
             </p>
             <p @click="$parent.form = false" class="text-red-700 hover:text-red-800 cursor-pointer text-lg font-bold">
                 X
@@ -9,19 +9,13 @@
         </div>
         <p class="block text-blue-700 font-bold mb-1 text-lg">{{ __('Sistem Nasıl Çalışır?') }}
         </p>
-        <ul class="list-decimal list-inside">
+        <ul class="list-decimal list-inside mb-4">
             <li>
                 {{ __('onlineAppointment.step1') }} <a href="{{ config('admin.tel') }}" class="text-blue-600 underline">
                     {{ config('admin.tel') }} </a>
             </li>
             <li>
                 {{ __('onlineAppointment.step2') }}
-            </li>
-            <li>
-                {{ __('onlineAppointment.step3') }}
-            </li>
-            <li>
-                {{ __('onlineAppointment.step4') }}
             </li>
         </ul>
         <form method="POST" @submit.prevent="submitData">

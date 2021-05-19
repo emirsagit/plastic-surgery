@@ -18,13 +18,14 @@ class CreateServicesTable extends Migration
             $table->string('title');
             $table->string('slug')->unique();
             $table->text('excerpt')->nullable();
-            $table->text('body');
+            $table->text('body')->nullable();
             $table->string('image')->nullable();
             $table->string('alt')->nullable();
             $table->string('video')->nullable();
             $table->string('seo_title')->nullable();
             $table->string('seo_description')->nullable();
             $table->string('language')->index();
+            $table->foreignId('parent')->nullable()->constrained('services');
             $table->foreignId('language_parent')->nullable()->constrained('services');
             $table->timestamps();
         });

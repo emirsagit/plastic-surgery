@@ -1,8 +1,10 @@
-<div class="fixed z-20 top-72 right-0 bg-green-700 text-white rounded-l-lg p-1 hover:bg-green-900 cursor-pointer select-none transform hover:-translate-y-1 hover:scale-x-110 transition duration-500 ease-in-out flex flex-row items-center"
+<div class="fixed z-30 top-72 right-0 bg-green-700 text-white rounded-l-lg p-1 hover:bg-green-900 cursor-pointer select-none transform hover:-translate-y-1 hover:scale-x-110 transition duration-500 ease-in-out flex flex-row items-center"
     @click="form = true">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-8 h-8" fill="currentColor">
-        <path d="M4 6c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2H4zm18 1l-4 3v4l4 3V7z" /></svg>
-    <p class="hidden lg:flex">
-        {{ __('Online Muayene') }}
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 lg:mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+    </svg>
+    <p class="lg:flex">
+        {{ __('Randevu') }}
     </p>
 </div>

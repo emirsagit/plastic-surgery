@@ -1,15 +1,8 @@
-<footer class="relative bg-gray-300 pt-16 pb-6">
-  <div class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
-    style="height: 80px; transform: translateZ(0px);">
-    <svg class="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
-      version="1.1" viewBox="0 0 2560 100" x="0" y="0">
-      <polygon class="text-gray-300 fill-current" points="2560 0 2560 100 0 100"></polygon>
-    </svg>
-  </div>
+<footer class="relative bg-gray-300 pt-16 pb-6 lg:mt-20 mt-10">
   <div class="container mx-auto px-4">
     <div class="flex flex-wrap">
       <div class="w-full lg:w-6/12 px-4 flex flex-col items-center">
-        <h4 class="text-3xl font-semibold">{{ __('Evde Bakım Hizmeti') }}</h4>
+        <h4 class="text-3xl font-semibold">{{ __('Op. Dr. Hayati KALE') }}</h4>
         <div class="mt-6">
           <button
             class="bg-white text-blue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 p-3"
@@ -20,6 +13,7 @@
                 fill="#475993" /></svg></button><button
             class="bg-white text-blue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 p-3"
             type="button">
+            
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 551.034 551.034">
               <linearGradient id="a" gradientUnits="userSpaceOnUse" x1="275.517" y1="4.57" x2="275.517" y2="549.72"
                 gradientTransform="matrix(1 0 0 -1 0 554)">

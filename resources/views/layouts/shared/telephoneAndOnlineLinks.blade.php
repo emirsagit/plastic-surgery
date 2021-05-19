@@ -8,5 +8,5 @@
 </a>
 <p
     class="hidden md:flex bg-green-500 text-white active:bg-green-100 text-lg font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md hover:bg-green-700 outline-none focus:outline-none cursor-pointer select-none transform hover:-translate-y-1 hover:scale-110 transition duration-500 ease-in-out text-uppercase" @click="form = true">
-    {{ __('Online Muayene') }}
+    {{ __('Randevu Oluştur') }}
 </p>

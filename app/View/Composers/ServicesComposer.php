@@ -12,7 +12,7 @@ class ServicesComposer
     public function __construct()
     {
         if (! $this->services) {
-            $this->services = Service::where('language', app()->getLocale())->get();
+            $this->services = Service::where('language', app()->getLocale())->with('children')->get();
         }
     }
 

@@ -27,7 +27,6 @@ class ServicesAdminFormRequest extends FormRequest
         return [
             'title' => 'required|unique:services|max:255',
             'slug' => 'required|unique:services|max:255',
-            'body' => 'required',
             'language' => 'required',
             'image' => 'image|max:300'
         ];

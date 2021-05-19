@@ -1,15 +1,12 @@
-<div class="container relative mx-auto lg:mt-12">
-    <div class="items-center flex flex-wrap">
-        <div class="w-full md:w-8/12 lg:w-6/12 px-4 ml-auto mr-auto text-center bg-gray-700 bg-opacity-50 rounded-lg py-4">
-            <h1 class="text-white font-semibold text-4xl lg:text-5xl">
-                {{ __('Evde Sağlık Hizmeti') }}
-            </h1>
-            <p class="mt-4 text-md lg:text-lg text-white">
-                {{ __('home.content') }}
-            </p>
-            <div class="mt-4 mb-0 lg:mb-4 flex flex-row justify-evenly">
-                @include('layouts.shared.telephoneAndOnlineLinks')
-            </div>
-        </div>
-    </div>
+<canvas id="nokey" class="z-10 h-64 w-full lg:h-96 flex flex-col">
+</canvas>
+
+<div class="absolute left-0 z-20 h-64 lg:h-96">
+        <img src="/img/hayati-kale-ameliyat.png" alt="" class="h-64 lg:h-96">
+        {{-- <img src="/img/hayati-kale.png" alt=""> --}}
+</div>
+
+<div class="absolute flex flex-col z-20 items-end lg:mr-96 p-5 text-white w-full tracking-wider">
+        <h1 class="p-5 rounded text-2xl lg:text-4xl md:text-2xl">Op. Dr. Hayati KALE</h1>
+        <p class="mr-5 text-xs lg:text-md -mt-2">Estetik, Sağlık ve Güzellik İçin...</p>
 </div>

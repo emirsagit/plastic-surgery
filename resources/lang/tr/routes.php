@@ -1,7 +1,7 @@
 <?php 
 return [
     'about' => 'hakkimizda',
-    'services' => 'hizmetlerimiz',
+    'services' => 'Uzmanlıklar',
     'contact' => 'iletisim',
     'blog' => 'blog'
 ]
