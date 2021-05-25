@@ -67,24 +67,161 @@ div.ck-editor__editable a {
 /* ckeditor end */
 
 .bg-whatsapp {
-    background-color: #7ad06d;
+    background-color: #009900;
 }
 
 .bg-rhinoplasty {
-    background:#d5d6d5;
+    background: #d5d6d5;
     background-repeat: no-repeat;
     background-size: contain cover;
 }
 
-*{
+* {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
-body{
+body {
     overflow-x: hidden;
 }
 
-canvas{
-    background-color: #000;
+@media (min-width: 1024px) {
+    section {
+        padding-left: 2.25rem;
+    }
 }
+
+.bg-black-pattern {
+    background-image: url("/img/black-pattern.png");
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+
+.bg-blue-pattern {
+    background-image: url("/img/blue-pattern.png");
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+
+.bg-profile {
+    background-image: url("/img/bg-profile.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+
+.cssanimation {
+    animation-duration: 1.5s;
+    animation-fill-mode: both;
+}
+
+.fadeInBottom {
+    animation-name: fadeInBottom
+}
+
+@keyframes fadeInBottom {
+    from {
+        opacity: 0.5;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1
+    }
+}
+
+.bg-soft-gray {
+    background-color: #ededed;
+}
+
+.text-soft-gray {
+    color: #ededed;
+}
+
+.fadeInBottomPen {
+    animation-name: fadeInBottomPen
+}
+
+@keyframes fadeInBottomPen {
+    from {
+        opacity: 0;
+        transform: translateY(200%);
+        transform: translateX(300%);
+    }
+    to {
+        opacity: 0.8
+    }
+}
+
+.scale {
+    animation: crescendo 1.5s alternate ease-in-out;
+}
+
+@keyframes crescendo {
+    0% {
+        transform: scale(.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.animation-opacity {
+    animation: change-opacity 2.5s alternate ease-in-out;
+}
+
+@keyframes change-opacity {
+    from {
+        opacity: 0.1;
+    }
+    to {
+        opacity: 1
+    }
+}
+
+.initial-glass {
+    transform: translateX(80%) translateY(-80%) rotate(45deg);
+}
+
+
+.box {
+    align-self: flex-end;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    background-color: #F44336;
+    height: 200px;
+    margin: 0 auto 0 auto;
+    transform-origin: bottom;
+    width: 200px;
+}
+
+.bounce {
+    animation: bounce 2.5s infinite ease-in-out;
+}
+
+@keyframes bounce {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+/* purgecss start ignore */
+.bg-primary {
+    background-color: #DE9051;
+}
+
+.bg-secondary {
+    background-color: #F59F58;
+}
+
+.bg-third {
+    background-color: #D9955D;
+}
+
+.bg-fourth {
+    background-color: #CF864A;
+}
+
+.nav-gradient {
+    background: linear-gradient(#2a1653, white);
+}
+/* purgecss end ignore */
+
+

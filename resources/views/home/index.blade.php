@@ -2,9 +2,9 @@
 
 @section('content')
 <main>
-  <div class="flex content-center items-center justify-center">
+  <section class="mx-auto">
     @include('home.partials.title')
-  </div>
+  </section>
 
   <section class="mx-auto px-4 mt-10 lg:mt-20">
     @include('home.partials.rhinoplasty')
@@ -14,12 +14,17 @@
     @include('home.partials.services')
   </section>
 
-  {{-- <section class="">
-    @include('home.partials.about')
+  <section class="mx-auto px-4 mt-10 lg:mt-20">
+    @include('home.partials.whyChooseUsRhinoplasty')
   </section>
 
-  <section class="relative">
-    @include('home.partials.whyUs')
-  </section> --}}
+  <section class="mx-auto mt-10 lg:mt-20">
+    @include('home.partials.slider')
+  </section>
+
+  <section class="mx-auto px-4 mt-10 lg:mt-20">
+    @include('home.partials.whyChooseUsFace')
+  </section>
+
 </main>
 @endsection

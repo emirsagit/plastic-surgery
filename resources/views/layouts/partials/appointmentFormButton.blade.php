@@ -1,4 +1,4 @@
-<div class="fixed z-30 top-72 right-0 bg-green-700 text-white rounded-l-lg p-1 hover:bg-green-900 cursor-pointer select-none transform hover:-translate-y-1 hover:scale-x-110 transition duration-500 ease-in-out flex flex-row items-center"
+<div class="fixed z-30 bottom-12 lg:bottom-24 right-0 bg-green-800 text-white rounded-l-lg p-1 hover:bg-green-900 cursor-pointer select-none transform hover:-translate-y-1 hover:scale-x-110 transition duration-500 ease-in-out flex flex-row items-center"
     @click="form = true">
     <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 lg:mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"

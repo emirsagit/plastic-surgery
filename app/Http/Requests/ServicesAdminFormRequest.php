@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Support\Str;
+use Illuminate\Validation\Rule;
 use Illuminate\Foundation\Http\FormRequest;
 
 class ServicesAdminFormRequest extends FormRequest
@@ -25,8 +26,12 @@ class ServicesAdminFormRequest extends FormRequest
     public function rules()
     {
         return [
-            'title' => 'required|unique:services|max:255',
-            'slug' => 'required|unique:services|max:255',
+            'title' => [
+                'required', "max:255", "unique:services,title",
+            ],
+            'slug' => [
+                'required', "max:255", "unique:services,slug",
+            ],
             'language' => 'required',
             'image' => 'image|max:300'
         ];

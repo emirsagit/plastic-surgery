@@ -1,5 +1,5 @@
-<div class="fixed z-40 top-32 right-0" x-data="{changeLanguage : false}">
-    <p class="bg-blue-600 text-white rounded-l-xl p-3 hover:bg-blue-800 cursor-pointer select-none flex flex-row items-center uppercase transition duration-500 ease-in-out"
+<div class="fixed z-40 top-20 right-0" x-data="{changeLanguage : false}">
+    <p class="bg-blue-800 text-white rounded-l-xl p-3 hover:bg-blue-900 cursor-pointer select-none flex flex-row items-center uppercase transition duration-500 ease-in-out"
         @click="changeLanguage = !changeLanguage">
         {{ app()->getLocale() }}
     </p>

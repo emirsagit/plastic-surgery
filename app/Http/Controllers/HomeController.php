@@ -22,12 +22,12 @@ class HomeController extends Controller
             SEOTools::setTitle('Home Health Care - Online Doctor - Patient Care at Home');
             SEOTools::setDescription('Click for home health care service, home patient care service, online doctor examination. We gained the trust of thousands of patients with our specialist doctor and nurse in every branch.');
         }
-        SEOTools::opengraph()->setUrl('https://evdesaglikacilbakim.com');
-        SEOMeta::addAlternateLanguage("tr", 'https://evdesaglikacilbakim.com');
-        SEOMeta::addAlternateLanguage("en", 'https://evdesaglikacilbakim.com/en');
-        SEOTools::setCanonical('https://evdesaglikacilbakim.com');
+        SEOTools::opengraph()->setUrl('https://www.hayatikale.com');
+        SEOMeta::addAlternateLanguage("tr", 'https://www.hayatikale.com');
+        SEOMeta::addAlternateLanguage("en", 'https://www.hayatikale.com/en');
+        SEOTools::setCanonical('https://www.hayatikale.com');
         SEOTools::opengraph()->addProperty('type', 'website');
-        SEOTools::jsonLd()->addImage('https://evdesaglikacilbakim.com/img/doktor_giris.jpg');
+        SEOTools::jsonLd()->addImage('https://www.hayatikale.com/img/hayati-kale-profile.png');
         return view('home.index');
     }
 

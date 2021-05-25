@@ -32,11 +32,9 @@ Route::get('/dashboard', function () {
 
 Route::prefix('admin')->middleware(['auth', 'admin'])->group(function () {
     Route::get('/', [AdminNotificationsController::class, 'index'])->name('admin.notifications');
-    Route::prefix('services')->group(function () {
-        Route::get('/', [AdminServicesController::class, 'index'])->name('admin.services.index');
-        Route::get('/create', [AdminServicesController::class, 'create'])->name('admin.services.create');
-        Route::post('/store', [AdminServicesController::class, 'store'])->name('admin.services.store');
-    });
+    Route::resource('services', AdminServicesController::class, [
+        'as' => 'admin'
+     ]); 
 });
 /* endadmin */
 
@@ -52,13 +50,9 @@ foreach (config('localization.languages') as $locale) {
         Route::get(trans('routes.blog'), [BlogController::class, 'index']);
     });
 };
-app()->setLocale($currentLocale); 
+app()->setLocale($currentLocale);
 
 /* some tr routes for seo*/
 Route::get('/language/{locale}', [LocalizationController::class, 'index']);
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/{service}', [ServicesController::class, 'show'])->name('services.show');
-
-
-
-

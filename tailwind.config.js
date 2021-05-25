@@ -12,19 +12,30 @@ module.exports = {
                 sans: ["Nunito", ...defaultTheme.fontFamily.sans],
             },
         },
-
+        
+/* purgecss start ignore */
         borderColor: (theme) => ({
             ...theme("colors"),
             DEFAULT: theme("colors.gray.300", "currentColor"),
-
             primary: "#de9051",
+        }),
+
+        gradientColorStops: (theme) => ({
+            ...theme("colors"),
+            navbar: '#2a1653'
         }),
 
         backgroundColor: (theme) => ({
             ...theme("colors"),
-            primary: "#de9051",
+            navbar: '#2a1653'
         }),
     },
+/* purgecss end ignore */
+
+    plugins: [
+        require('@tailwindcss/aspect-ratio'),
+        // ...
+      ],
 
     variants: {
         extend: {

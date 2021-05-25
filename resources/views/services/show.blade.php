@@ -1,13 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
-<main class="min-h-screen mb-32">
-    <div class="bg-gradient-to-b from-blue-500 bg-contain bg-no-repeat">
-        <div class="pt-24">
+<main class="min-h-screen">
+    <div class="bg-gradient-to-b nav-gradient">
+        <div class="pt-12">
             <div class="flex flex-row justify-evenly mb-8 mt-4">
                 @include('layouts.shared.telephoneAndOnlineLinks')
             </div>
-            <h1 class="text-4xl text-gray-800 font-extrabold text-center">
+            <h1 class="text-4xl text-gray-800 font-extrabold text-center px-2">
                 {{ $service->title }}
             </h1>
         </div>
@@ -16,19 +16,21 @@
         <p class="px-4"><a href="{{ '/' . app()->getLocale() }}" class="hover:text-gray-900">{{ __('Anasayfa') }} /</a>
             {{ $service->title }}</p>
     </div>
-    <div class="relative mb-32 lg:px-32 flex lg:flex-row flex-col">
+    <div class="relative lg:mb-20 mb-10 lg:px-32 flex lg:flex-row flex-col">
         <div class="lg:px-4 lg:w-8/12 text-justify">
-            <img src="{{ $service->image }}" alt="{{ $service->alt }}" width="1000" height="562.5"
+            @if($service->image)
+            <img src="{{ $service->image }}" alt="{{ $service->alt }}" width="1080" height="1080"
                 class="shadow-lg rounded">
-            <div class="px-4 lg:px-0 mt-4 ck-editor__editable">
+            @endif
+            <div class="px-6 lg:px-0 mt-4 ck-editor__editable">
                 {!! $service->body !!}
             </div>
         </div>
         <div class="mx-4 lg:w-4/12">
             <div class="sticky top-0 flex items-center justify-center">
-
                 <form id="form" class="bg-white rounded px-8 pt-6 pb-8 mb-4">
-                    <p class="block text-gray-700 font-bold mb-2 text-xl text-center">Hangi Hizmetimiz Hakkında Görüşmek İstersiniz?</p>
+                    <p class="block text-gray-700 font-bold mb-2 text-xl text-center">Hangi Hizmetimiz Hakkında Görüşmek
+                        İstersiniz?</p>
                     <br>
                     <div class="mb-4">
                         <label class="block text-gray-700 text-sm font-bold mb-2" for="name">
@@ -73,8 +75,7 @@
                         </label>
                         <textarea
                             class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                            name="body" id="body" type="text" placeholder="Kısaca Mesajınız"
-                            required></textarea>
+                            name="body" id="body" type="text" placeholder="Kısaca Mesajınız" required></textarea>
                     </div>
                     <div class="flex items-center justify-between">
                         <button id="submit"
@@ -83,7 +84,6 @@
                             İletişime Geçin
                         </button>
                     </div>
-                    <div class="mb-4">
                 </form>
             </div>
         </div>

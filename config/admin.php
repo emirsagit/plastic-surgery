@@ -4,7 +4,10 @@ return  [
     'admins' => ['emirsagit@gmail.com', 'ahmetsagit@gmail.com'],
     'languages' => ['tr', 'en'],
     'whatsapp' => '905433452677',
-    'twitterSite' => '@evdeasaglikbakim'
+    'twitterSite' => '@evdeasaglikbakim',
+    'colors' => [
+        'primary', 'secondary', 'third', 'fourth'
+    ]
 ]
 
 

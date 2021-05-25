@@ -13,8 +13,8 @@
 </a>
 {{-- large screen whatsapp end --}}
 {{-- mobile whaptsapp and phone --}}
-<div class="fixed bottom-0 w-full flex flex-row z-50 lg:hidden">
-  <a class="py-1 w-1/2 flex justify-center content-center text-lg bg-blue-500 text-white font-bold rounded-l items-center cursor-pointer "
+<div class="fixed bottom-0 w-full flex flex-row z-50 lg:hidden overflow-hidden select-none">
+  <a class="py-1 w-1/2 flex justify-center content-center text-lg bg-blue-800 text-white font-bold rounded-l items-center cursor-pointer "
     href="tel:{{ Config::get('admin.tel') }}">
     <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 py-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
