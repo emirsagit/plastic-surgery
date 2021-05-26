@@ -7,7 +7,9 @@ return  [
     'twitterSite' => '@evdeasaglikbakim',
     'colors' => [
         'primary', 'secondary', 'third', 'fourth'
-    ]
+    ],
+    'email' => 'info@hayatikale.com',
+    'address' => 'Bahçelievler Mahallesi Yanyol D-100 Sk. No:14.B Metroport Rezidance, Bahçelievler, İstanbul'
 ]
 
 

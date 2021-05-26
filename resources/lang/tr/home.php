@@ -1,11 +1,10 @@
 <?php 
 return [
-    "content" => "Burun Estetiği ve Yüz
-    Estetik Cerrahisi alanında binlerce başarılı operasyona imza atarak marka haline
-    gelen Op. Dr. Hayati Kale halihazırda İstanbul / Bahçelievler'de bulunan kliniğinde
-    hizmet vermektedir. Çalışmaları KBB hastalıkları dışında özel ilgi
-    alanları olan burun estetiği, revizyon rinoplasti, dolgu uygulamaları, botoks, kulak ve yüz estetik cerrahisi üzerine yoğunlaşmıştır.", 
-    "resume" => "... yılında ... üniversitesinden mezun olduktan sonra ... üniversitesinde KBB ve Baş Boyun Cerrahisi alanında uzmanlık eğitimini almıştır. ... yıl ... hastanesinde özellikle rinoloji (burun ameliyatları), rinoplasti, uyku apnesi, yüz ve dudak dolgu uygulamaları konularında yüzlerce başarılı ameliyat gerçekleştirmiştir. ",
+    "content" => "Burun ve yüz estetiği üzerine 2000’den fazla ameliyat gerçekleştiren Dr. Kale'nin özel olarak ilgilendiği konular: “Burun estetiği, revizyon (düzeltme) burun ameliyatları, burun ve sinüslerin sağlığı ile ilgili tüm ameliyatlar, botoks ve dolgu enjeksiyonları, kepçe kulak ameliyatı, dudak kaldırma, bişektomi ve göz kapağı estetiği gibi yüz bölgesi tamamlayıcı estetik işlemleridir.” 
+    <span class='font-bold'>Kendi geliştirdiği burun estetiği tekniğini piezo ultrasonik kemik şekillendirici cihaz ile tam anlamıyla kombine ederek çağın gerektirdiği üzere çekiç ve keski kullanmadan burun ameliyatlarını yapmaya devam etmektedir.</span>", 
+
+    "resume" => "Ankara doğumlu olan Dr. Kale Konya Meram Tıp Fakültesi'nden mezun oldu. TUS sınavında kendisinin “bilim, sanat ve cerrahinin bir araya gelmesi” olarak tanımladığı Kulak Burun Boğaz ve Baş Boyun Cerrahisi Bölümü’nü kazandı. Ankara Yıldırım Beyazıt Üniversitesi Atatürk Eğitim ve Araştırma Hastanesi bünyesinde tamamladığı uzmanlık eğitiminin ardından Ankara Sami Ulus Eğitim ve Araştırma Hastanesi’nde mecburi hizmetini tamamladı. İstanbul Bahçelievler Medicana Hastanesi’nde çalıştığı süre içerisinde aynı zamanda Biruni Üniversitesi KBB Anabilim Dalı’nda akademisyen olarak tıp fakültesi öğrencilerinin eğitimine katkıda bulundu. Şu anda kurucusu olduğu Kale Klinik bünyesi altında aktif olarak çalışmalarına devam etmektedir.",
+    
     "rhinoplastyContent" => "Burun ameliyatının temel amacı daha iyi nefes alırken kusursuz görünümünüzle
     yaşam kalitenizin artmasına katkı sağlamaktır.", 
 

@@ -91,8 +91,8 @@ body {
     }
 }
 
-.bg-black-pattern {
-    background-image: url("/img/black-pattern.png");
+.bg-red-pattern {
+    background-image: url("/img/red-pattern.png");
     /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 
@@ -181,7 +181,6 @@ body {
     transform: translateX(80%) translateY(-80%) rotate(45deg);
 }
 
-
 .box {
     align-self: flex-end;
     animation-duration: 2s;
@@ -198,11 +197,19 @@ body {
 }
 
 @keyframes bounce {
-    0%   { transform: translateY(0); }
-    50%  { transform: translateY(-10px); }
-    100% { transform: translateY(0); }
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
+
 /* purgecss start ignore */
+
 .bg-primary {
     background-color: #DE9051;
 }
@@ -220,8 +227,104 @@ body {
 }
 
 .nav-gradient {
-    background: linear-gradient(#2a1653, white);
+    background: linear-gradient(#003049, white);
 }
+
 /* purgecss end ignore */
 
+.text-orange {
+    color: #f77f00;
+}
 
+.text-light-orange {
+    color: #fcbf49
+}
+
+.text-extralight-orange {
+    color: #eae2b7
+}
+
+.bg-about-profile {
+    background: url("/img/about-background.jpg") no-repeat center center;
+    background-size: cover;
+}
+
+.bg-soft-gray-height {
+    height: 40rem;
+}
+
+@media (max-width: 375px) {
+    .bg-soft-gray-height {
+        height: 34rem;
+    }
+}
+
+@media (max-width: 375px) {
+    .bg-soft-gray-height {
+        height: 30rem;
+    }
+}
+
+iframe {
+    overflow: hidden;
+}
+
+/* embed youtube  */
+
+.embed-youtube {
+    background-color: #000;
+    margin-bottom: 30px;
+    position: relative;
+    padding-top: 56.25%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.embed-youtube img {
+    width: 100%;
+    top: -16.84%;
+    left: 0;
+    opacity: 0.7;
+}
+
+.embed-youtube .embed-youtube-play {
+    width: 68px;
+    height: 48px;
+    background-color: #333;
+    box-shadow: 0 0 30px rgba( 0, 0, 0, 0.6);
+    z-index: 1;
+    opacity: 0.8;
+    border-radius: 6px;
+}
+
+.embed-youtube .embed-youtube-play:before {
+    content: "";
+    border-style: solid;
+    border-width: 15px 0 15px 26.0px;
+    border-color: transparent transparent transparent #fff;
+}
+
+.embed-youtube img, .embed-youtube .embed-youtube-play {
+    cursor: pointer;
+}
+
+.embed-youtube img, .embed-youtube iframe, .embed-youtube .embed-youtube-play, .embed-youtube .embed-youtube-play:before {
+    position: absolute;
+}
+
+.embed-youtube .embed-youtube-play, .embed-youtube .embed-youtube-play:before {
+    top: 50%;
+    left: 50%;
+    transform: translate3d( -50%, -50%, 0);
+}
+
+.embed-youtube iframe {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.embed-youtube .embed-youtube-play:hover {
+    background-color: #f00;
+}

@@ -3,6 +3,10 @@
 @section('content')
 <main>
   <section class="mx-auto">
+    @include('home.partials.profilePhoto')
+  </section>
+
+  <section class="mx-auto">
     @include('home.partials.title')
   </section>
 

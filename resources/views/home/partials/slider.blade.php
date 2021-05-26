@@ -1,4 +1,4 @@
-<div class="pb-24 pt-12 bg-black-pattern">
+<div class="pb-24 pt-12 bg-blue-pattern">
     <p class="text-white text-3xl pb-8 text-center">Galeri</p>
     <div class="splide w-full h-full text-gray-800" id="splide">
         <div class="splide__track">

@@ -4,12 +4,12 @@
         @include('layouts.partials.nav')
     </div>
     <button class="cursor-pointer text-xl leading-none lg:px-1 py-1 outline-none focus:outline-none z-50 pt-4 pl-4"
-        type="button" @click="openNavbar = true">
+        type="button" @click="openNavbar = true" x-show="! openNavbar">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="white" class="w-8 h-8 z-50">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
     </button>
     <img src="/img/logo/hayati-kale-logo-beyaz.png" alt="hayati-kale-logo" class="lg:hidden w-48 pr-4" width="933"
-        height="286">
+        height="286" x-show="! openNavbar">
     <div class="links pb-10 flex-col items-center w-full hidden lg:flex" x-show="! openNavbar">
         <a href="https://www.instagram.com/hayatikale" class="pb-2">
             <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 100 100" fill="#fff"><path d="M70 9.999H30c-10.999 0-20 9.001-20 20v40.002c0 10.996 9.001 20 20 20h40c10.999 0 20-9.004 20-20V29.999c0-10.999-9.001-20-20-20zm13.333 60.002c0 7.35-5.979 13.333-13.333 13.333H30c-7.351 0-13.333-5.983-13.333-13.333V29.999c0-7.352 5.982-13.333 13.333-13.333h40c7.354 0 13.333 5.981 13.333 13.333v40.002z"/><circle cx="71.667" cy="28.332" r="5"/><path d="M50 29.999c-11.048 0-20 8.953-20 20 0 11.043 8.952 20.002 20 20.002 11.045 0 20-8.959 20-20.002 0-11.047-8.955-20-20-20zm0 33.335c-7.363 0-13.333-5.97-13.333-13.335S42.637 36.666 50 36.666s13.333 5.968 13.333 13.333S57.363 63.334 50 63.334z"/></svg>

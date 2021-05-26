@@ -9,7 +9,7 @@
     </li>
     <li class="flex items-center  rounded pl-4 lg:pl-0">
       <a class="text-white px-3 py-2 lg:py-3 flex items-center text-sm lg:text-md  uppercase font-bold"
-        href="{{ '/' . app()->getLocale() . '/' .   trans('routes.about') }}">{{ __('Hakkımızda') }}</a>
+        href="{{ '/' . app()->getLocale() . '/' .   trans('routes.about') }}">Op. Dr. Hayati Kale</a>
     </li>
     @foreach ($services as $service)
     @if($service->children)

@@ -22,12 +22,12 @@ module.exports = {
 
         gradientColorStops: (theme) => ({
             ...theme("colors"),
-            navbar: '#2a1653'
+            navbar: '#003049'
         }),
 
         backgroundColor: (theme) => ({
             ...theme("colors"),
-            navbar: '#2a1653'
+            navbar: '#003049'
         }),
     },
 /* purgecss end ignore */

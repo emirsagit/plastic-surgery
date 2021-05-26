@@ -1,7 +1,7 @@
 <div class="flex lg:flex-row flex-col justify-between bg-soft-gray py-10 lg:pb-0 lg:ml-10">
   <div class="lg:w-1/2 px-4 hidden lg:flex flex-col justify-center">
-    {{-- <img src="/img/hayati-kale-profile3.png" alt="hayati kale fotoğraf" width="761" height="1080"
-    class="" loading="lazy"> --}}
+    <img src="/img/hayati-kale-profile.png" alt="hayati kale fotoğraf" width="662" height="1040"
+    class="" loading="lazy">
   </div>
   <div class="lg:w-1/2 flex m-auto lg:justify-center justify-start pl-4 lg:pl-0 border-l-4 border-blue-800">
     <div class="px-4 text-gray-800">
