@@ -1,11 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
-<main
-  class="w-full min-h-screen flex flex-col text-white justify-center items-center bg-blue-pattern lg:-mb-20 -mb-10">
+<main class="w-full min-h-screen flex flex-col text-white justify-center items-center bg-blue-pattern lg:-mb-20 -mb-10">
   <section class="w-full text-white flex flex-col lg:justify-between overflow-hidden items-center">
     <div class="flex justify-start items-start flex-col w-full">
-      <p class="relative py-1 px-2 bg-blue-800 hover:bg-blue-900 rounded text-white text-left text-sm"><- Anasayfa</p>
+      <a class="relative py-1 px-2 bg-blue-800 hover:bg-blue-900 rounded text-white text-left text-sm"
+        href="{{ '/' . app()->getLocale() }}">{{ (__('Anasayfa')) }}</a>
     </div>
     <div class="flex flex-col py-2 mt-4 mb-4">
       <h1 class="font-bold text-3xl text-center">{{ __(' İletişim') }}</h1>

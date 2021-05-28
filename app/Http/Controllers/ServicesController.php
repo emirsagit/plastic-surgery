@@ -17,7 +17,15 @@ class ServicesController extends Controller
     public function show(Service $service, Request $request)
     {
         app()->setLocale($service->language);
-        SEOTools::setTitle($service->seo_title);
+        
+        $kbb = Service::where('slug', 'kbb-hastaliklari')->first();
+        $parent_slug = $service->parent ? $service->parent->slug : null;
+
+        if ($service->slug == $kbb->slug || $parent_slug == $kbb->slug) {
+            SEOTools::setTitle($service->seo_title . " | " . config('admin.name'));
+        } else {
+            SEOTools::setTitle($service->seo_title . " - " . now()->year . " Fiyatı" . " | " . config('admin.name'));
+        }
         SEOTools::setDescription($service->seo_description);
         if (count($children = $service->childrenLanguages)) {
             foreach ($children as $child) {
