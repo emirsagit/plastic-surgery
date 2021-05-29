@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Image;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Service extends Model
 {
@@ -43,4 +44,9 @@ class Service extends Model
     {
         return $this->hasOne($this, 'id', 'language_parent');
     }
+
+    public function images()
+    {
+        return $this->morphToMany(Image::class, 'imageable'); 
+    } 
 }

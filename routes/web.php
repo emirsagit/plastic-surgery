@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminMediaController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Request;
 use App\Http\Controllers\HomeController;
@@ -34,7 +35,10 @@ Route::prefix('admin')->middleware(['auth', 'admin'])->group(function () {
     Route::get('/', [AdminNotificationsController::class, 'index'])->name('admin.notifications');
     Route::resource('services', AdminServicesController::class, [
         'as' => 'admin'
-     ]); 
+    ]);
+    Route::resource('image', AdminMediaController::class, [
+        'as' => 'admin'
+    ]);
 });
 /* endadmin */
 

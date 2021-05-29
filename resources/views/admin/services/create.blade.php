@@ -62,7 +62,7 @@
                                 <div x-show="previewUrl == ''">
                                     <p class="text-center uppercase text-bold">
                                         <label for="thumbnail" class="cursor-pointer">
-                                            Fotoğraf Yükle (En Fazla 300kb, en iyi görüntü için 16/9)
+                                            Fotoğraf Yükle (En Fazla 300kb, en iyi görüntü için 1080/1080)
                                         </label>
                                         <input type="file" name="image" id="thumbnail" class="hidden"
                                             @change="updatePreview()">

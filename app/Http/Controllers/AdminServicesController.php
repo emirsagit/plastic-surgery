@@ -106,5 +106,5 @@ class AdminServicesController extends Controller
         $img = Image::make($image)->resize(1080, 1080)->stream('jpg', 80); //manipulate image
         Storage::put("/public/services/$id-$filename", $img->__toString());
         return $filename;
-    } 
+    }
 }

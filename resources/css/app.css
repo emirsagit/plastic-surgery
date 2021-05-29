@@ -328,3 +328,21 @@ iframe {
 .embed-youtube .embed-youtube-play:hover {
     background-color: #f00;
 }
+
+/* end embed youtube  */
+
+/* multile select */
+.svg-icon {
+    width: 1em;
+    height: 1em;
+}
+
+.svg-icon path, .svg-icon polygon, .svg-icon rect {
+    fill: #333;
+}
+
+.svg-icon circle {
+    stroke: #4691f6;
+    stroke-width: 1;
+}
+/* end multiple select */
