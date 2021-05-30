@@ -1,4 +1,4 @@
-<div class="fixed z-40 top-20 right-0" x-data="{changeLanguage : false}">
+<div class="absolute z-20 top-40 right-0" x-data="{changeLanguage : false}">
     <p class="bg-blue-800 text-white rounded-l-xl p-3 hover:bg-blue-900 cursor-pointer select-none flex flex-row items-center uppercase transition duration-500 ease-in-out"
         @click="changeLanguage = !changeLanguage">
         {{ app()->getLocale() }}

@@ -3,7 +3,8 @@ return [
     'about' => 'hakkimizda',
     'services' => 'Uzmanlıklar',
     'contact' => 'iletisim',
-    'blog' => 'blog'
+    'blog' => 'blog',
+    'gallery' => 'galeri',
 ]
 
 

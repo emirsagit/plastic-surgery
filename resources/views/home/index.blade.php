@@ -32,3 +32,22 @@
 
 </main>
 @endsection
+@section('script')
+<script>
+  document.addEventListener( 'DOMContentLoaded', function () {
+                new Splide( '.splide', {
+                      type : 'loop',
+                      perPage: 3,
+                      gap: '1em',
+                      cover : true,
+                      heightRatio: 0.3,
+                      breakpoints: {
+                      1024: {
+                      perPage: 1,
+                      heightRatio: 1,
+                      },
+                }
+    }).mount();
+});
+</script>
+@endsection

@@ -21,7 +21,7 @@ class AdminServicesController extends Controller
     {
         return view('admin.services.create', [
             'parents' => Service::where('language', 'tr')->get(),
-            'servicess' => Service::with('parent')->get()
+            'servicess' => Service::with('parentService')->get()
         ]);
     }
 
@@ -29,7 +29,7 @@ class AdminServicesController extends Controller
     {
         return view('admin.services.edit', [
             'parents' => Service::where('language', 'tr')->get(),
-            'servicess' => Service::with('parent')->get(),
+            'servicess' => Service::with('parentService')->get(),
             'service' => $service
         ]);
     }

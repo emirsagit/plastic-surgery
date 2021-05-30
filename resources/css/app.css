@@ -1,6 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+div.ck-editor__editable a {
+    @apply text-blue-600;
+    cursor: pointer;
+    @apply hover:text-blue-800
+}
+
 .bg-image {
     background-image: url('/img/doktor_giris.jpg');
     background-repeat: no-repeat;
@@ -39,12 +45,6 @@ div.ck-editor__editable h4 {
     @apply font-bold;
     @apply mt-2;
     @apply text-black;
-}
-
-div.ck-editor__editable a {
-    @apply text-blue-600;
-    cursor: pointer;
-    @apply hover:text-blue-800;
 }
 
 .ck-editor__editable {
@@ -332,6 +332,7 @@ iframe {
 /* end embed youtube  */
 
 /* multile select */
+
 .svg-icon {
     width: 1em;
     height: 1em;
@@ -345,4 +346,32 @@ iframe {
     stroke: #4691f6;
     stroke-width: 1;
 }
+
 /* end multiple select */
+
+.toc-list {
+    padding-left: 0 !important;
+}
+
+.is-active-link {
+    font-weight: 400 !important;
+}
+
+.toc-list-item {
+    text-decoration: underline;
+    font-style: italic;
+    padding-top: 5px;
+    padding-bottom: 2px;
+    @apply text-blue-800;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 1024px) {
+    .toc-list-item {
+        display: flex;
+        justify-content: start;
+        color: white;
+    }
+}
+

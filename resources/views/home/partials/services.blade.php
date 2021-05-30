@@ -22,7 +22,7 @@
         <div class="flex flex-col divide-y divide-light-blue-400 px-3">
             @foreach ($service->children as $child)
             <a href="{{ route('services.show', $child) }}"
-                class="py-1 text-sm text-gray-100 hover:text-gray-800 transition duration-500 ease-in-out">{{ $child->title }}</a>
+                class="py-1 text-sm text-gray-100 hover:text-gray-800 transition duration-500 ease-in-out capitalize">{{ $child->title }}</a>
             @endforeach
         </div>
     </div>

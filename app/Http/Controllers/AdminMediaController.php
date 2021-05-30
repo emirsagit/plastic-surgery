@@ -19,7 +19,7 @@ class AdminMediaController extends Controller
     {
         if ($request->service && $request->service != 'all') {
             $service = Service::where('slug', $request->service)->first();
-            $images = $service->images()->paginate(5);
+            $images = $service->images()->paginate(20);
             $images->load('services');
 
             return view('admin.media.index', [
@@ -28,7 +28,7 @@ class AdminMediaController extends Controller
             ]);
         }
 
-        $images = Image::with('services')->paginate(5);
+        $images = Image::with('services')->paginate(20);
 
         return view('admin.media.index', [
             'images' => $images

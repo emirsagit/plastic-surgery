@@ -1,92 +1,79 @@
 @extends('layouts.app')
 
+@section('head')
+<link rel="stylesheet" href="/css/tocbot.css">
+@endsection
+
 @section('content')
-<main class="min-h-screen">
+<main class="min-h-screen lg:ml-10">
     <div class="bg-gradient-to-b nav-gradient">
         <div class="pt-12">
             <div class="flex flex-row justify-evenly mb-8 mt-4">
                 @include('layouts.shared.telephoneAndOnlineLinks')
             </div>
-            <h1 class="text-4xl text-gray-800 font-extrabold text-center px-2">
+            <h1 class="text-4xl text-gray-800 font-extrabold text-center px-2 uppercase">
                 {{ $service->title }}
             </h1>
         </div>
     </div>
-    <div class="mt-8 border-t border-b border-blue-200 text-sm text-gray-700 font-light lg:pl-32">
-        <p class="px-4"><a href="{{ '/' . app()->getLocale() }}" class="hover:text-gray-900">{{ __('Anasayfa') }} /</a>
-            {{ $service->title }}</p>
+
+    <div class="mt-8 border-t border-b border-blue-200 text-sm text-gray-700 font-light lg:pl-24">
+        <p class="px-4 uppercase">
+            <a href="{{ '/' . app()->getLocale() }}" class="hover:text-gray-900">{{ __('Anasayfa') }} / </a>
+            {{ $service->title }}
+        </p>
     </div>
-    <div class="relative lg:mb-20 mb-10 lg:px-32 flex lg:flex-row flex-col">
-        <div class="lg:px-4 lg:w-8/12 text-justify">
-            @if($service->image)
-            <img src="{{ $service->image }}" alt="{{ $service->alt }}" width="1080" height="1080"
-                class="shadow-lg rounded">
-            @endif
-            <div class="px-6 lg:px-0 mt-4 ck-editor__editable">
-                {!! $service->body !!}
-            </div>
+
+    <div class="relative mb-10 lg:px-24">
+        <div class="flex lg:flex-row flex-col">
+
+            @include('services.partials.imageAndBody')
+
+            @include('services.partials.summary')
+
         </div>
-        <div class="mx-4 lg:w-4/12">
-            <div class="sticky top-0 flex items-center justify-center">
-                <form id="form" class="bg-white rounded px-8 pt-6 pb-8 mb-4">
-                    <p class="block text-gray-700 font-bold mb-2 text-xl text-center">Hangi Hizmetimiz Hakkında Görüşmek
-                        İstersiniz?</p>
-                    <br>
-                    <div class="mb-4">
-                        <label class="block text-gray-700 text-sm font-bold mb-2" for="name">
-                            İsim
-                        </label>
-                        <input
-                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                            name="name" id="name" type="text" placeholder="Adınız Soyadınız" required>
-                    </div>
+    </div>
 
-                    <div class="mb-4">
-                        <label class="block text-gray-700 text-sm font-bold mb-2" for="telefon">
-                            Telefon
-                        </label>
-                        <input
-                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                            name="tel" id="tel" type="tel" placeholder="Telefon Numaranız" required>
-                    </div>
+    <div class="flex flex-col p-4 bg-soft-gray">
 
-                    <div class="mb-4">
-                        <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
-                            E-Posta
-                        </label>
-                        <input
-                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                            name="email" id="email" type="email" placeholder="E-Posta Adresiniz" required>
-                    </div>
+        @include('services.partials.photos')
 
-                    {{-- <div class="mb-4">
-                        <label class="block text-gray-700 text-sm font-bold mb-2" for="Date">
-                            Fecha
-                        </label>
-                        <input
-                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                            name="date" id="date" type="date" placeholder="Ingresa tu Fecha de Nacimiento" required>
-                    </div> --}}
+    </div>
 
-                    <div class="mb-4">
+    <div class="flex flex-col mb-10 lg:px-24">
 
-                        <label class="block text-gray-700 text-sm font-bold mb-2" for="body">
-                            Mesajınız
-                        </label>
-                        <textarea
-                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                            name="body" id="body" type="text" placeholder="Kısaca Mesajınız" required></textarea>
-                    </div>
-                    <div class="flex items-center justify-between">
-                        <button id="submit"
-                            class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                            type="submit">
-                            İletişime Geçin
-                        </button>
-                    </div>
-                </form>
-            </div>
-        </div>
+        @include('services.partials.relatedServices')
+
     </div>
 </main>
+@endsection
+
+@section('script')
+<script src="/js/tocbot.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+    const pharagraph = document.getElementById('pharagraph');
+    const headers = pharagraph.querySelectorAll('h2, h3, h4')
+
+    
+    Array.from(headers).forEach((header, index) => {
+        header.setAttribute("id", header.innerText)
+    })
+
+
+    tocbot.init({
+  // Where to render the table of contents.
+  tocSelector: '.table-of-contents',
+  // Where to grab the headings to build the table of contents.
+  contentSelector: '.ck-editor__editable',
+  // Which headings to grab inside of the contentSelector element.
+  headingSelector: 'h2, h3, h4',
+  // For headings inside relative or absolute positioned containers within content.
+  hasInnerContainers: true,
+  headingsOffset: 40,
+  scrollSmoothOffset: -80
+});
+
+});
+</script>
 @endsection

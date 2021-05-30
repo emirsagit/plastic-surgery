@@ -3,7 +3,8 @@ return [
     'about' => 'about',
     'services' => 'services', 
     'contact' => 'contact',
-    'blog' => 'blog'
+    'blog' => 'blog',
+    'gallery' => 'galeri'
 ]
 
 

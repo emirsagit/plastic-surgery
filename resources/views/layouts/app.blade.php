@@ -12,11 +12,10 @@
   <link href="{{ asset('css/fonts.css') }}" rel="preload">
   {{-- <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet"> --}}
   <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-  <link rel="stylesheet" href="{{ asset('css/splide.min.css') }}">
+  <link rel="stylesheet" href="/css/splide.min.css">
   <meta name="csrf-token" content="{{ csrf_token() }}" />
-
-  <!-- Styles -->
   @yield('head')
+  <!-- Styles -->
 </head>
 
 <body class="text-gray-800" x-data="{ form: false }">
@@ -29,44 +28,23 @@
     @yield('content')
   </div>
   @include('layouts.partials.footer')
-  @yield('footer')
-</body>
-<script>
-  function toggleNavbar(collapseID) {
-          document.getElementById(collapseID).classList.toggle("hidden");
-          document.getElementById(collapseID).classList.toggle("block");
-        }
-</script>
+  <script>
+    function toggleNavbar(collapseID) {
+            document.getElementById(collapseID).classList.toggle("hidden");
+            document.getElementById(collapseID).classList.toggle("block");
+          }
+  </script>
 
-<script src="{{ asset('js/app.js') }}" defer></script>
-<script src="{{ asset('js/splide.min.js') }}" defer></script>
-<script src="{{ asset('js/lazysizes.min.js') }}" defer></script>
-<script>
-  function goto() {
-    console.log('burada');
-    document.getElementById('who-is-doctor-hayati').scrollIntoView({ behavior: 'smooth' });
-  }
-
-  document.addEventListener( 'DOMContentLoaded', function () {
-  new Splide( '.splide', {
-    type   : 'loop',
-    perPage: 3,
-    gap: '1em',
-    cover  : true,
-    heightRatio: 0.3,
-    breakpoints: {
-    1024: {
-      perPage: 1,
-            heightRatio: 1,
-      },
+  <script src="{{ asset('js/app.js') }}" defer></script>
+  <script src="{{ asset('js/lazysizes.min.js') }}" defer></script>
+  <script src="/js/splide.min.js"></script>
+  @yield('script')
+  <script>
+    function goto() {
+      document.getElementById('who-is-doctor-hayati').scrollIntoView({ behavior: 'smooth' });
     }
-}).mount();
-});
-
-
-
-</script>
-
+  </script>
+</body>
 
 
 </html>

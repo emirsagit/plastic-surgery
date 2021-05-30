@@ -10,6 +10,7 @@ use App\Http\Controllers\AdminServicesController;
 use App\Http\Controllers\OnlineAppointmentController;
 use App\Http\Controllers\AdminNotificationsController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\GalleryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -52,11 +53,12 @@ foreach (config('localization.languages') as $locale) {
         Route::get(trans('routes.contact'), [HomeController::class, 'contact']);
         Route::get(trans('routes.services'), [ServicesController::class, 'index']);
         Route::get(trans('routes.blog'), [BlogController::class, 'index']);
+        Route::get(trans('routes.gallery'), [GalleryController::class, 'index']);
     });
 };
+    
 app()->setLocale($currentLocale);
-
-/* some tr routes for seo*/
+/* some tr routes withoud tr for seo*/
 Route::get('/language/{locale}', [LocalizationController::class, 'index']);
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/{service}', [ServicesController::class, 'show'])->name('services.show');

@@ -35,18 +35,23 @@ class Service extends Model
         return $this->hasMany($this, 'parent');
     }
 
-    public function parent()
+    public function parentService()
     {
-        return $this->hasOne($this, 'id', 'parent');
+        return $this->belongsTo($this, 'parent', 'id');
     }
 
     public function parentLanguage()
     {
-        return $this->hasOne($this, 'id', 'language_parent');
+        return $this->belongsTo($this, 'id', 'language_parent');
     }
 
     public function images()
     {
         return $this->morphToMany(Image::class, 'imageable'); 
+    } 
+
+    public function isParent()
+    {
+        return ($this->parentService ? false : true);
     } 
 }
