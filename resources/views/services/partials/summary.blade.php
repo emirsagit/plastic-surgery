@@ -1,7 +1,7 @@
 <div class="mx-4 lg:w-4/12" x-data="{ showSummary: '' }">
 
     <div class="flex-col items-center justify-center hidden lg:flex">
-        @include('services.partials.contactForm')
+        @include('layouts.shared.contactForm')
     </div>
 
     <div class="fixed transform flex flex-row items-center -rotate-90 text-white left-0 bottom-60 z-20 -ml-12 font-bold px-1 bg-blue-800 tex-sm tracking-wider cursor-pointer select-none"
@@ -14,9 +14,9 @@
         </svg>
     </div>
 
-    <div class="z-30 px-3 fixed left-0 py-4 lg:flex flex-col lg:justify-center lg:sticky top-20 bg-blue-800 lg:bg-white lg:top-0 text-white h-screen w-2/3 lg:w-full text-sm lg:text-md"
+    <div class="z-20 px-3 fixed left-0 py-4 lg:flex flex-col lg:justify-center lg:sticky top-20 bg-blue-800 lg:bg-white lg:top-0 text-white h-screen w-2/3 lg:w-full text-sm lg:text-md lg:text-blue-900"
         x-show.transition.in.duration.200ms.out.duration.50ms="showSummary || $screen('lg')" x-cloak>
-        <p class="text-right cursor-pointer font-bold" x-on:click="showSummary = ''">X</p>
+        <p class="text-right cursor-pointer font-bold" x-on:click="showSummary = ''" x-show="showSummary && ! $screen('lg')">X</p>
         <ul>
             <li class="font-bold pb-4 text-white lg:text-blue-900">
                 {{ __('YAZI İÇERİĞİ') }}

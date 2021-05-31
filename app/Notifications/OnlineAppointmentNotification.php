@@ -28,23 +28,9 @@ class OnlineAppointmentNotification extends Notification
      */
     public function via($notifiable)
     {
-        return ['mail', 'database'];
+        return ['database', 'mail'];
     }
 
-    /**
-     * Get the mail representation of the notification.
-     *
-     * @param  mixed  $notifiable
-     * @return \Illuminate\Notifications\Messages\MailMessage
-     */
-    public function toMail($notifiable)
-    {
-        return (new MailMessage)
-            ->line($this->request->name . ' online muayene randevusu talep ediyor.')
-            ->line('Telefonu: ' . $this->request->tel)
-            ->line('Talep Ettiği Tarih: ' . $this->request->date)
-            ->line('Mesajı: ' . $this->request->body);
-    }
 
     /**
      * Get the array representation of the notification.
@@ -57,8 +43,25 @@ class OnlineAppointmentNotification extends Notification
         return [
             'name' => $this->request->name,
             'tel' => $this->request->tel,
+            'email' => $this->request->email,
             'date' => $this->request->date,
             'body' => $this->request->body,
         ];
+    }
+
+    /**
+     * Get the mail representation of the notification.
+     *
+     * @param  mixed  $notifiable
+     * @return \Illuminate\Notifications\Messages\MailMessage
+     */
+    public function toMail($notifiable)
+    {
+        return (new MailMessage)
+            ->line($this->request->name . ' iletişime geçmek istiyor.')
+            ->line('Telefonu: ' . $this->request->tel)
+            ->line('Belirtilmişse Mail Adresi: ' . $this->request->email)
+            ->line('Randevu Talebi Olduğunu Belirtmişse Tarihi: ' . $this->request->date)
+            ->line('Mesajı: ' . $this->request->body);
     }
 }

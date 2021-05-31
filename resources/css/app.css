@@ -7,6 +7,10 @@ div.ck-editor__editable a {
     @apply hover:text-blue-800
 }
 
+html {
+    scroll-behavior: smooth;
+  }
+
 .bg-image {
     background-image: url('/img/doktor_giris.jpg');
     background-repeat: no-repeat;
@@ -371,7 +375,7 @@ iframe {
     .toc-list-item {
         display: flex;
         justify-content: start;
-        color: white;
+        color: #ededed;
     }
 }
 

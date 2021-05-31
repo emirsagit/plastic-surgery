@@ -9,7 +9,7 @@ class AdminNotificationsController extends Controller
     public function index()
     {
         $unreadNotifications = ($user = auth()->user())->unreadNotifications;
-        $readedNotifications = $user->notifications->whereNotNull('read_at')->sortBy('created_at')->take(20);
+        $readedNotifications = $user->notifications->whereNotNull('read_at')->sortByDesc('created_at')->take(50);
         $user->unreadNotifications->markAsRead();
         return view('admin.notifications', [
             'unreadNotifications' => $unreadNotifications,

@@ -10,25 +10,10 @@
       <div class="w-full lg:w-6/12 mt-8 lg:mt-0">
         <div class="flex w-full items-top mb-6">
           <div class="w-full px-4 flex flex-col items-center">
-            <span class="block uppercase text-white text-sm font-semibold mb-2">{{ __('YARARLI SAYFALAR') }}</span>
-            <ul class="list-unstyled">
-              <li>
-                <a class="text-gray-100 hover:text-gray-200 font-semibold block pb-2 text-sm"
-                  href="{{ '/' . app()->getLocale() }}">{{ __('Anasayfa') }}</a>
-              </li>
-              <li>
-                <a class="text-gray-100 hover:text-gray-200 font-semibold block pb-2 text-sm"
-                  href="{{ '/' . app()->getLocale() . '/' .   trans('routes.about') }}">{{ __('Hakkımızda') }}</a>
-              </li>
-              <li>
-                <a class="text-gray-100 hover:text-gray-200 font-semibold block pb-2 text-sm"
-                  href="{{ '/' . app()->getLocale() . '/' .   trans('routes.blog') }}">{{ __('Blog') }}</a>
-              </li>
-              <li>
-                <a class="text-gray-100 hover:text-gray-200 font-semibold block pb-2 text-sm"
-                  href="{{ '/' . app()->getLocale() . '/' .   trans('routes.contact') }}">{{ __('İletişim') }}</a>
-              </li>
-            </ul>
+            <span class="block uppercase text-white font-semibold mb-2">{{ __('İletişim Bilgilerimiz:') }}</span>
+            <div class="flex flex-col justify-center items-center">
+              @include('layouts.shared.contactInformation')
+            </div>
           </div>
         </div>
       </div>

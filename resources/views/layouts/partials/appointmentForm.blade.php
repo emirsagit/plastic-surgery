@@ -1,4 +1,5 @@
-<div class="h-screen w-screen flex justify-center items-center fixed top-0 z-50" x-show.transition.duration.300ms="form" x-cloak>
+<div class="h-screen w-screen flex justify-center items-center fixed top-0 z-50" x-show.transition.duration.300ms="form"
+    x-cloak>
     <div class="w-screen h-full lg:w-4/5 bg-white rounded-lg p-4 lg:px-8 overflow-auto" x-data="contactForm()">
         <div class="flex justify-between flex-row">
             <p class="block text-gray-700 font-bold mb-1 text-xl text-center">{{ __('Randevu oluştur') }}
@@ -25,7 +26,7 @@
                     {{ __('İsim') }}
                 </label>
                 <input
-                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required
                     :class="{ 'border-red-500': errors.name }" name="name" id="name" type="text"
                     placeholder="{{ __('İsim') }}" x-model="formData.name" @keydown="errors.name = false">
                 <template x-if="errors.name">
@@ -38,11 +39,24 @@
                     {{ __('Telefon') }}
                 </label>
                 <input
-                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required
                     :class="{ 'border-red-500': errors.tel }" name="tel" id="tel" type="tel"
                     placeholder="{{ __('Telefon') }}" @keydown="errors.tel = false" x-model="formData.tel">
                 <template x-if="errors.tel">
                     <p class="text-red-600" x-text="errors.tel[0]"></p>
+                </template>
+            </div>
+
+            <div class="mb-2">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="Date">
+                    {{ __('E-Mail Address') }}
+                </label>
+                <input
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    :class="{ 'border-red-500': errors.email }" name="email" id="email" type="email"
+                    placeholder="{{ __('E-Mail Address') }}" @click="errors.email = false" x-model="formData.email">
+                <template x-if="errors.email">
+                    <p class="text-red-600" x-text="errors.email[0]"></p>
                 </template>
             </div>
 
@@ -65,7 +79,7 @@
                 </label>
                 <textarea
                     class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                    :class="{ 'border-red-500': errors.body }" name="body" id="body" type="text"
+                    :class="{ 'border-red-500': errors.body }" name="body" id="body" type="text" required
                     placeholder="{{ __('Kısaca probleminizi yazınız.') }}" @keydown="errors.body = false"
                     x-model="formData.body"></textarea>
                 <template x-if="errors.body">
@@ -116,7 +130,7 @@
             this.errors = "";
             axios.post('/appointment', this.formData)
             .then((response) => {
-                this.message = "Randevu kaydınız başarıyla oluşturuldu. 24 Saat içerisinde sizi arayacağız. Teşekkürler...";
+                this.message = "Randevu kaydınız başarıyla oluşturuldu. En kısa sürede sizi arayacağız. Teşekkürler...";
                 this.loading = false;
                 this.formData = false;
             })

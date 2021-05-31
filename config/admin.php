@@ -1,7 +1,7 @@
 <?php 
 return  [
     'tel' => '+90 543 345 26 77',
-    'admins' => ['emirsagit@gmail.com', 'ahmetsagit@gmail.com'],
+    'admins' => ['emirsagit@gmail.com', 'info@hayatikale.com'],
     'languages' => ['tr'],
     'whatsapp' => '905433452677',
     'twitterSite' => '@evdeasaglikbakim',

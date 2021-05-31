@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Image;
 use App\Models\Service;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
@@ -15,29 +16,73 @@ class HomeController extends Controller
         if ($request->path() === 'tr') {
             return redirect('/');
         }
-        if (App::isLocale('tr')) {
-            SEOTools::setTitle('Op. Dr. Hayati Kale | Burun estetiği, Botox, Yüz-Dudak Dolgusu');
-            SEOTools::setDescription("Op. Dr. Hayati Kale - Burun estetiği (Rhinoplasty), Botox, Yüz-Dudak Dolgusu, KBB Hastalıkları. Daha iyi nefes alırken daha güzel görünmek ister misiniz?");
-        } elseif(App::isLocale('en')) {
-            SEOTools::setTitle('Home Health Care - Online Doctor - Patient Care at Home');
-            SEOTools::setDescription('Click for home health care service, home patient care service, online doctor examination. We gained the trust of thousands of patients with our specialist doctor and nurse in every branch.');
-        }
-        SEOTools::opengraph()->setUrl('https://www.hayatikale.com');
-        SEOMeta::addAlternateLanguage("tr", 'https://www.hayatikale.com');
-        SEOMeta::addAlternateLanguage("en", 'https://www.hayatikale.com/en');
-        SEOTools::setCanonical('https://www.hayatikale.com');
-        SEOTools::opengraph()->addProperty('type', 'website');
-        SEOTools::jsonLd()->addImage('https://www.hayatikale.com/img/hayati-kale-profile.png');
-        return view('home.index');
+
+        $this->seo();
+
+        return view('home.index', [
+            'images' => Image::with('services')->inRandomOrder()->take(15)->get()
+        ]);
     }
 
     public function about()
     {
+        $this->aboutSeo();
+
         return view('about.index');
     }
 
     public function contact()
     {
+        $this->contactSeo();
+
         return view('contact.index');
+    }
+
+    protected function seo()
+    {
+        if (App::isLocale('tr')) {
+            SEOTools::setTitle('Op. Dr. Hayati Kale | Burun estetiği, Botox, Yüz-Dudak Dolgusu');
+            SEOTools::setDescription("Op. Dr. Hayati Kale - Burun estetiği (Rhinoplasty), Botox, Yüz-Dudak Dolgusu, KBB Hastalıkları. Daha iyi nefes alırken daha güzel görünmek ister misiniz?");
+        } elseif (App::isLocale('en')) {
+            SEOTools::setTitle('Surgeon Dr. Hayati Kale | Rhinoplasty, Botox, Face-Lip Filling');
+            SEOTools::setDescription('Surgeon Dr. Hayati Kale - Rhinoplasty, Botox, Face-Lip Filling, ENT Diseases. Do you want to look more beautiful while breathing better? Location: Istanbul');
+        }
+        SEOTools::opengraph()->setUrl('https://www.hayatikale.com');
+        SEOMeta::addAlternateLanguage("tr", 'https://www.hayatikale.com');
+        SEOMeta::addAlternateLanguage("en", 'https://www.hayatikale.com/en');
+        SEOTools::opengraph()->addProperty('type', 'website');
+        SEOTools::jsonLd()->addImage('https://www.hayatikale.com/img/hayati-kale-profile3.png');
+    }
+
+    protected function contactSeo()
+    {
+        if (App::isLocale('tr')) {
+            SEOTools::setTitle('Op. Dr. Hayati Kale | İletişim Bilgileri');
+            SEOTools::setDescription("Op. Dr. Hayati Kale - Burun estetiği (Rhinoplasty), Botox, Yüz-Dudak Dolgusu, KBB Hastalıkları. İletişim ve randevu bilgileri için tıklayınız");
+        } elseif (App::isLocale('en')) {
+            SEOTools::setTitle('Surgeon Dr. Hayati Kale | Contact Information');
+            SEOTools::setDescription('Surgeon Doctor Hayati Kale - Rhinoplasty, Botox, Face-Lip Filling, ENT Diseases. Click for contact and appointment information - Istanbul');
+        }
+        SEOTools::opengraph()->setUrl('https://www.hayatikale.com');
+        SEOMeta::addAlternateLanguage("tr", 'https://www.hayatikale.com/tr/iletisim');
+        SEOMeta::addAlternateLanguage("en", 'https://www.hayatikale.com/en/contact');
+        SEOTools::opengraph()->addProperty('type', 'website');
+        SEOTools::jsonLd()->addImage('https://www.hayatikale.com/img/hayati-kale-profile.png');
+    }
+
+    protected function aboutSeo()
+    {
+        if (App::isLocale('tr')) {
+            SEOTools::setTitle('Op.Dr. Hayati Kale Kimdir? | Burun ve Yüz Estetiği | KBB Hastalıkları');
+            SEOTools::setDescription("Op. Dr. Hayati Kale - Burun estetiği (Rhinoplasty), Botox, Yüz-Dudak Dolgusu, KBB Hastalıkları. Dr. Kale Kimdir? Estetik ameliyatlarında hangi yöntemi kullanıyor?");
+        } elseif (App::isLocale('en')) {
+            SEOTools::setTitle("Who's Surgeon Dr. Hayati Kale | Rhinoplasty, Botox, Face-Lip Filling");
+            SEOTools::setDescription('Surgeon Doctor Hayati Kale - Rhinoplasty, Botox, Face-Lip Filling, ENT Diseases. Who is Dr. Kale? Which method does he use in his aesthetic surgeries? Istanbul');
+        }
+        SEOTools::opengraph()->setUrl('https://www.hayatikale.com');
+        SEOMeta::addAlternateLanguage("tr", 'https://www.hayatikale.com/tr/hakkimizda');
+        SEOMeta::addAlternateLanguage("en", 'https://www.hayatikale.com/en/about');
+        SEOTools::opengraph()->addProperty('type', 'website');
+        SEOTools::jsonLd()->addImage('https://www.hayatikale.com/img/hayati-kale-profile3.png');
     }
 }

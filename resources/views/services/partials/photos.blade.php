@@ -1,15 +1,24 @@
 @if ($images->count())
 
-<p class="text-center text-xl lg:text-2xl text-red-700 font-bold px-4">
+<p class="text-center text-xl lg:text-2xl text-red-700 font-bold px-4" id="galeri">
     {{ ucwords($service->title) . ' ' . __('Fotoğraflar') }}
 </p>
 
-<div class="w-full mt-4 flex px-6 lg:px-4 flex-row justify-center items-center flex-wrap" id="galeri">
+<div class="w-full mt-4 flex px-6 lg:px-4 flex-row justify-center items-center flex-wrap">
     @foreach ($images as $image)
-    <div class="lg:w-1/3 w-full p-2">
+    <div class="lg:w-1/3 w-full p-2 transform transition duration-500 hover:scale-105">
         <a href="{{ '/' . app()->getLocale() . '/' .   trans('routes.gallery') . "?service=$service->slug" }}">
-            <img src="{{ $image->path }}" alt="{{ $image->alt }}" width="1080" height="1080"
-                class="transform transition duration-500 hover:scale-105" loading="lazy">
+            <img src="{{ $image->path }}" alt="{{ $image->alt }}" width="1080" height="1080" loading="lazy"
+                class="relative">
+            <span
+                class="absolute bottom-5 right-5 bg-gray-800 bg-opacity-60 text-white px-2 py-1 rounded text-sm flex flex-row mr-1">Galeriye
+                Git
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" fill="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M13 5l7 7-7 7M5 5l7 7-7 7" />
+                </svg>
+            </span>
         </a>
     </div>
     @endforeach

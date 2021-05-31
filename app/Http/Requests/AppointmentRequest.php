@@ -26,13 +26,16 @@ class AppointmentRequest extends FormRequest
         return [
             'tel' => 'required|digits_between:10,13',
             'body' => 'required',
-            'date' => 'required|after:yesterday',
             'name' => 'required|string',
+            'date' => 'after:yesterday|nullable',
+            'email' => 'email|nullable'
         ];
     }
 
     protected function prepareForValidation()
     {
-        $this->date = date('d-m-Y', strtotime($this->date));
+        if ($this->date) {
+            $this->date = date('d-m-Y', strtotime($this->date));
+        }
     }
 }

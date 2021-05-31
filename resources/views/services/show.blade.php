@@ -73,7 +73,6 @@
   headingsOffset: 40,
   scrollSmoothOffset: -80
 });
-
 });
 </script>
 @endsection
