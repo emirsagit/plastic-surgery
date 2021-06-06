@@ -27,7 +27,7 @@ class Service extends Model
     // Aşağıdaki ilişkiler sayesinde alternate language taglarını dinamik olarak ekledim.
     public function childrenLanguages()
     {
-        return $this->hasMany($this, 'language_parent');
+        return $this->hasMany($this, 'language_parent', 'id');
     }
 
     public function children()
@@ -42,7 +42,7 @@ class Service extends Model
 
     public function parentLanguage()
     {
-        return $this->belongsTo($this, 'id', 'language_parent');
+        return $this->belongsTo($this, 'language_parent', 'id');
     }
 
     public function images()

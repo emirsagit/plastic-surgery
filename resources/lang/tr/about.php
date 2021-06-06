@@ -57,9 +57,6 @@ return [
     Botoks ve Dolgu Enjeksiyonları
     </li>
     <li>
-    Botoks ve Dolgu Enjeksiyonları
-    </li>
-    <li>
     Dudak kaldırma, bişektomi ve göz kapağı estetiği gibi yüz bölgesi tamamlayıcı estetik işlemleri
     </li>
     '

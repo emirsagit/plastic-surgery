@@ -1,5 +1,5 @@
 <form method="POST" @submit.prevent="submitData" x-data="contactForm()" class="z-20 bg-gray-800 bg-opacity-75 p-4">
-    <p class="mb-2 mt-4 text-center mx-2">İletişim Formu</p>
+    <p class="mb-2 mt-4 text-center mx-2">{{ __('İletişim Formu') }}</p>
     @csrf
     <div class="mb-2">
         <label class="block text-white text-sm font-bold mb-2" for="name">

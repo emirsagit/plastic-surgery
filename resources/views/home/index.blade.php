@@ -37,6 +37,7 @@
   document.addEventListener( 'DOMContentLoaded', function () {
                 new Splide( '.splide', {
                       type : 'loop',
+                      lazyLoad : 'nearby',
                       perPage: 3,
                       gap: '1em',
                       cover : true,

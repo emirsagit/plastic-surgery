@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Image;
 use App\Models\Service;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
 use Artesaos\SEOTools\Facades\SEOMeta;
 use Artesaos\SEOTools\Facades\SEOTools;
 
@@ -39,7 +40,11 @@ class ServicesController extends Controller
         if ($service->slug == $kbb->slug || $parent_slug == $kbb->slug) {
             SEOTools::setTitle($service->seo_title . " | " . config('admin.name'));
         } else {
-            SEOTools::setTitle($service->seo_title . " - " . now()->year . " Fiyatı" . " | " . config('admin.name'));
+            if (App::isLocale('en')) {
+                SEOTools::setTitle($service->seo_title . " - " . now()->year . " Price | " . config('admin.english_name'));
+            }elseif(App::isLocale('tr')) {
+                SEOTools::setTitle($service->seo_title . " - " . now()->year . " Fiyatı | " . config('admin.name'));
+            }
         }
 
         SEOTools::setDescription($service->seo_description);

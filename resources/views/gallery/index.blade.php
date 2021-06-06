@@ -13,7 +13,7 @@
     </div>
 </div>
 <h1 class="mt-6 lg:mt-10 mb-8 text-center lg:text-4xl text-2xl border-b-2 border-blue-800 pb-2">
-    Fotoğraf Galerisi</h1>
+    {{ __('Fotoğraf Galerisi') }}</h1>
 <div class="flex flex-row flex-wrap gallery">
     @foreach ($images as $image)
     <a href="{{ $image->path }}"

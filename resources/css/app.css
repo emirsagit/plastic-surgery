@@ -9,7 +9,7 @@ div.ck-editor__editable a {
 
 html {
     scroll-behavior: smooth;
-  }
+}
 
 .bg-image {
     background-image: url('/img/doktor_giris.jpg');
@@ -379,3 +379,11 @@ iframe {
     }
 }
 
+@media (min-width: 1024px) {
+    .spacer {
+        height: 1068px;
+        margin: 0px 0 -1068px 0;
+        background: transparent;
+        /* you'll need this if #container's parent element has a different background from #container itself */
+    }
+}

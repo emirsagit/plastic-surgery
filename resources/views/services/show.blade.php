@@ -53,14 +53,10 @@
 <script>
     document.addEventListener("DOMContentLoaded", function(event) {
     const pharagraph = document.getElementById('pharagraph');
-    const headers = pharagraph.querySelectorAll('h2, h3, h4')
-
-    
+    const headers = pharagraph.querySelectorAll('h2, h3, h4')    
     Array.from(headers).forEach((header, index) => {
         header.setAttribute("id", header.innerText)
     })
-
-
     tocbot.init({
   // Where to render the table of contents.
   tocSelector: '.table-of-contents',

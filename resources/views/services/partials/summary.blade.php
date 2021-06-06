@@ -1,4 +1,4 @@
-<div class="mx-4 lg:w-4/12" x-data="{ showSummary: '' }">
+<aside class="mx-4 lg:w-4/12" x-data="{ showSummary: '' }">
 
     <div class="flex-col items-center justify-center hidden lg:flex">
         @include('layouts.shared.contactForm')
@@ -25,4 +25,4 @@
         <div class="table-of-contents" x-on:click="showSummary = ''">
         </div>
     </div>
-</div>
+</aside>

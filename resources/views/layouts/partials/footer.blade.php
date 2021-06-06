@@ -2,7 +2,7 @@
   <div class="container mx-auto px-4">
     <div class="flex flex-wrap">
       <div class="w-full lg:w-6/12 px-4 flex flex-col items-center">
-        <h4 class="text-3xl font-semibold">{{ __('Op. Dr. Hayati KALE') }}</h4>
+        <h4 class="text-3xl font-semibold">{{ __('Op. Dr. Hayati Kale') }}</h4>
         <div class="mt-6 flex flex-row">
           @include('layouts.shared.social')
         </div>

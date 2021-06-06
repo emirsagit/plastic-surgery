@@ -7,7 +7,7 @@
     <div class="px-4 text-gray-800">
       <h2 class="font-bold text-lg lg:text-3xl">{{ __('İstanbul Burun Estetiği') }}</h2>
       <div class="py-4">{!! __('home.istanbulBurunEstetigi') !!}</div>
-      <a href="{{ route('services.show', 'burun-estetigi') }}" class="text-md text-blue-600 hover:text-blue-700 cursor-pointer mb-10">{{ __("Devamı için tıklayınız") }}-></a>
+      <a href="{{ route('services.show', app()->getLocale() == 'tr' ? 'burun-estetigi' : 'rhinoplasty-nose-job') }}" class="text-md text-blue-600 hover:text-blue-700 cursor-pointer mb-10">{{ __("Devamı için tıklayınız") }}-></a>
     </div>
   </div>
 </div>

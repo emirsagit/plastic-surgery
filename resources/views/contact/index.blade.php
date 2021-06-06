@@ -8,7 +8,7 @@
         href="{{ '/' . app()->getLocale() }}">{{ (__('Anasayfa')) }}</a>
     </div>
     <div class="flex flex-col py-2 mt-4 mb-4">
-      <h1 class="font-bold text-3xl text-center">{{ __(' İletişim') }}</h1>
+      <h1 class="font-bold text-3xl text-center">{{ __('İletişim') }}</h1>
     </div>
     <div class="flex flex-col lg:flex-row justify-between pb-10">
       <div class="flex flex-col lg:ml-10 lg:justify-center p-4 lg:py-0 lg:w-1/2">

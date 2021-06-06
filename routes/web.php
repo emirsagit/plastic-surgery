@@ -53,7 +53,7 @@ foreach (config('localization.languages') as $locale) {
         Route::get(trans('routes.contact'), [HomeController::class, 'contact']);
         Route::get(trans('routes.services'), [ServicesController::class, 'index']);
         Route::get(trans('routes.blog'), [BlogController::class, 'index']);
-        Route::get(trans('routes.gallery'), [GalleryController::class, 'index']);
+        Route::get(trans('routes.gallery'), [GalleryController::class, 'index'])->name('gallery');
     });
 };
     

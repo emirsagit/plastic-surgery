@@ -6,7 +6,7 @@
     <div class="px-6 lg:px-0 ck-editor__editable mt-4" id="pharagraph">
         @if ($images->count())
         <a href="#galeri"
-            class="text-underline text-blue-900 hover:text-blue-800 italic bg-gray-100 p-2 rounded text-lg">{{ ucwords($service->title) . ' ' . __('Fotoğraf Galerisi') }}
+            class="text-underline text-blue-900 hover:text-blue-800 italic bg-gray-100 p-2 rounded text-lg">{{ __('Fotoğraf Galerisi') }}
         </a>
         @endif
         {!! $service->body !!}

@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Image;
-use App\Models\Service;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use Artesaos\SEOTools\Facades\SEOMeta;
@@ -57,11 +56,11 @@ class HomeController extends Controller
     protected function contactSeo()
     {
         if (App::isLocale('tr')) {
-            SEOTools::setTitle('Op. Dr. Hayati Kale | İletişim Bilgileri');
-            SEOTools::setDescription("Op. Dr. Hayati Kale - Burun estetiği (Rhinoplasty), Botox, Yüz-Dudak Dolgusu, KBB Hastalıkları. İletişim ve randevu bilgileri için tıklayınız");
+            SEOTools::setTitle('Dr. Hayati Kale, M.D. | İletişim Bilgileri');
+            SEOTools::setDescription("Dr. Hayati Kale, M.D. - Burun estetiği (Rhinoplasty), Botox, Yüz-Dudak Dolgusu, KBB Hastalıkları. İletişim ve randevu bilgileri için tıklayınız");
         } elseif (App::isLocale('en')) {
-            SEOTools::setTitle('Surgeon Dr. Hayati Kale | Contact Information');
-            SEOTools::setDescription('Surgeon Doctor Hayati Kale - Rhinoplasty, Botox, Face-Lip Filling, ENT Diseases. Click for contact and appointment information - Istanbul');
+            SEOTools::setTitle('Dr. Hayati Kale, M.D.  | Contact Information');
+            SEOTools::setDescription('Dr. Hayati Kale, M.D. - Rhinoplasty, Botox, Face-Lip Filling, ENT Diseases. Click for contact and appointment information - Istanbul');
         }
         SEOTools::opengraph()->setUrl('https://www.hayatikale.com');
         SEOMeta::addAlternateLanguage("tr", 'https://www.hayatikale.com/tr/iletisim');
@@ -76,8 +75,8 @@ class HomeController extends Controller
             SEOTools::setTitle('Op.Dr. Hayati Kale Kimdir? | Burun ve Yüz Estetiği | KBB Hastalıkları');
             SEOTools::setDescription("Op. Dr. Hayati Kale - Burun estetiği (Rhinoplasty), Botox, Yüz-Dudak Dolgusu, KBB Hastalıkları. Dr. Kale Kimdir? Estetik ameliyatlarında hangi yöntemi kullanıyor?");
         } elseif (App::isLocale('en')) {
-            SEOTools::setTitle("Who's Surgeon Dr. Hayati Kale | Rhinoplasty, Botox, Face-Lip Filling");
-            SEOTools::setDescription('Surgeon Doctor Hayati Kale - Rhinoplasty, Botox, Face-Lip Filling, ENT Diseases. Who is Dr. Kale? Which method does he use in his aesthetic surgeries? Istanbul');
+            SEOTools::setTitle("Who's Dr. Hayati Kale, M.D. | Rhinoplasty, Botox, Face-Lip Filling");
+            SEOTools::setDescription('Dr. Hayati Kale, M.D. - Rhinoplasty, Botox, Face-Lip Filling, ENT Diseases. Who is Dr. Kale? Which method does he use in his aesthetic surgeries? Istanbul');
         }
         SEOTools::opengraph()->setUrl('https://www.hayatikale.com');
         SEOMeta::addAlternateLanguage("tr", 'https://www.hayatikale.com/tr/hakkimizda');
