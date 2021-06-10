@@ -1,17 +1,17 @@
 <?php 
 return  [
-    'tel' => '+90 543 345 26 77',
-    'admins' => ['emirsagit@gmail.com', 'info@hayatikale.com'],
+    'tel' => '+90 555 55 55',
+    'admins' => ['mail@mail.com'],
     'languages' => ['tr', 'en'],
-    'whatsapp' => '905433452677',
-    'twitterSite' => '@evdeasaglikbakim',
+    'whatsapp' => '905555555',
+    'twitterSite' => '@twitter',
     'colors' => [
         'primary', 'secondary', 'third', 'fourth'
     ],
-    'email' => 'info@hayatikale.com',
-    'address' => 'Bahçelievler Mahallesi Yanyol D-100 Sk. No:14.B Metroport Rezidance, Bahçelievler, İstanbul',
-    'name' => 'Op.Dr. Hayati Kale',
-    'english_name' => 'Dr. Hayati Kale, M.D.'
+    'email' => 'mail@mail.com',
+    'address' => 'Adres',
+    'name' => 'Name',
+    'english_name' => 'Name'
 ]
 
 
