@@ -9,7 +9,7 @@
             class="hidden lg:flex lg:absolute cssanimation fadeInBottomPen initial-glass">
     <svg xmlns="http://www.w3.org/2000/svg"
             class="h-14 w-14 absolute m-auto bottom-30 left-12 md:bottom-24 md:left-24 right-0 z-20 animation-opacity hover:text-white cursor-pointer bounce" fill="none"
-            viewBox="0 0 24 24" stroke="currentColor" width="14" height="14" onClick="goto()">
+            viewBox="0 0 24 24" stroke="currentColor" width="14" height="14" id="arrow-hayati">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
     </svg>
 </div>

@@ -170,7 +170,7 @@
         </div>
     </div>
 </x-app-layout>
-
+<script src="/js/ckeditor5-build-classic/ckeditor.js"></script>
 <script>
     function imageData() {
   return {
@@ -193,15 +193,12 @@
     }
   };
 }
-</script>
-<script src="/js/ckeditor5-build-classic/ckeditor.js"></script>
-<script>
-    ClassicEditor
+
+ClassicEditor
      .create( document.querySelector( '#editor' ), {
         language: document.getElementById("selectedLanguage").value
     } )
     .catch( error => {
         console.log( error );
     } );
-
 </script>

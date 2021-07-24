@@ -61,4 +61,5 @@ app()->setLocale($currentLocale);
 /* some tr routes withoud tr for seo*/
 Route::get('/language/{locale}', [LocalizationController::class, 'index']);
 Route::get('/', [HomeController::class, 'index']);
+Route::get('/burun-estetigi', [ServicesController::class, 'showRhinoplasty'])->name('services.show-rhinoplasty');
 Route::get('/{service}', [ServicesController::class, 'show'])->name('services.show');

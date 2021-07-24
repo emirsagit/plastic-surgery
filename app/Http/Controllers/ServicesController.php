@@ -31,6 +31,23 @@ class ServicesController extends Controller
         ]);
     }
 
+    public function showRhinoplasty(Service $service)
+    {
+        $service = Service::where("slug", "burun-estetigi")->first();
+
+        app()->setLocale($service->language);
+
+        $service->load(['children', 'parentService', 'parentService.children']);
+
+        $this->seo($service);
+
+         return view('services.showRhinoplasty', [
+            'service' => $service,
+            'images' => $service->images()->latest()->take(3)->get(),
+            'relateds' => !$service->parentService ? $service->children->shuffle()->take(3) : $service->parentService->children->except(['id', $service->id])->shuffle()->take(3),
+        ]);
+    }
+
     protected function seo(Service $service)
     {
         $kbb = Service::where('slug', 'kbb-hastaliklari')->first();
@@ -42,7 +59,7 @@ class ServicesController extends Controller
         } else {
             if (App::isLocale('en')) {
                 SEOTools::setTitle($service->seo_title . " - " . now()->year . " Price | " . config('admin.english_name'));
-            }elseif(App::isLocale('tr')) {
+            } elseif (App::isLocale('tr')) {
                 SEOTools::setTitle($service->seo_title . " - " . now()->year . " Fiyatı | " . config('admin.name'));
             }
         }

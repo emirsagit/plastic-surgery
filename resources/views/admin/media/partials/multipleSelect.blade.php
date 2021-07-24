@@ -1,11 +1,10 @@
 <select x-cloak id="select">
     @foreach ($services as $service)
     @isset($image)
-    @foreach ($image->services as $image_service)
-    <option value="{{ $service->id }}" @if ($image_service->id === $service->id) selected="true" @endif>
+    <option value="{{ $service->id }}" @foreach ($image->services as $image_service) @if ($image_service->id ===
+        $service->id) selected="true" @endif @endforeach>
         {{ $service->title }}
     </option>
-    @endforeach
     @else
     <option value="{{ $service->id }}">{{ $service->title }}</option>
     @endisset

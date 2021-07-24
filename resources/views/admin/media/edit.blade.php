@@ -3,7 +3,7 @@
         <h2 class="font-semibold text-xl text-gray-800 leading-tight mb-2">
             {{ __('Yeni Hizmet Oluştur') }}
         </h2>
-        <a href="{{ route('admin.image.index') }}" class="p-1 bg-gray-200 rounded">Geri</a>
+        <a href="{{ url()->previous() }}" class="p-1 bg-gray-200 rounded">Geri</a>
         @if(Session::has('success'))
         <div class="bg-green-700">
             <p class="text-white font-bold text-lg mt-4 p-2">{{session::get('success')}}</p>

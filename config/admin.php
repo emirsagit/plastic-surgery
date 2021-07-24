@@ -1,7 +1,7 @@
 <?php 
 return  [
     'tel' => '+90 555 55 55',
-    'admins' => ['mail@mail.com'],
+    'admins' => ['emirsagit@gmail.com'],
     'languages' => ['tr', 'en'],
     'whatsapp' => '905555555',
     'twitterSite' => '@twitter',

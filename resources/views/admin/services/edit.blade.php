@@ -137,7 +137,8 @@
                             <option value="" selected>ANA HİZMET KATEGORİSİ OLUŞTURUYORUM</option>
                             @foreach ($servicess as $newService)
                             @if(! $newService->parent)
-                            <option value="{{ $newService->id }}" @if (old('main_service')===$newService->id || $newService->id === $service->parent) selected
+                            <option value="{{ $newService->id }}" @if (old('main_service')===$newService->id ||
+                                $newService->id === $service->parent) selected
                                 @endif>{{ $newService->title }}</option>
                             @endif
                             @endforeach
@@ -155,7 +156,8 @@
                             value="{{ old('parent') }}">
                             <option value="" selected>Seçiniz</option>
                             @foreach ($parents as $parent)
-                            <option value="{{ $parent->id }}" @if (old('parent')===$parent->id || $parent->id === $service->language_parent) selected
+                            <option value="{{ $parent->id }}" @if (old('parent')===$parent->id || $parent->id ===
+                                $service->language_parent) selected
                                 @endif>{{ $parent->title }}</option>
                             @endforeach
                         </select>
@@ -173,7 +175,7 @@
         </div>
     </div>
 </x-app-layout>
-
+<script src="/js/ckeditor5-build-classic/ckeditor.js"></script>
 <script>
     function imageData() {
   return {
@@ -196,9 +198,7 @@
     }
   };
 }
-</script>
-<script src="/js/ckeditor5-build-classic/ckeditor.js"></script>
-<script>
+
     ClassicEditor
      .create( document.querySelector( '#editor' ), {
         language: document.getElementById("selectedLanguage").value

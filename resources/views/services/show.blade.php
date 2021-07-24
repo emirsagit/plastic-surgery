@@ -50,25 +50,5 @@
 
 @section('script')
 <script src="/js/tocbot.min.js"></script>
-<script>
-    document.addEventListener("DOMContentLoaded", function(event) {
-    const pharagraph = document.getElementById('pharagraph');
-    const headers = pharagraph.querySelectorAll('h2, h3, h4')    
-    Array.from(headers).forEach((header, index) => {
-        header.setAttribute("id", header.innerText)
-    })
-    tocbot.init({
-  // Where to render the table of contents.
-  tocSelector: '.table-of-contents',
-  // Where to grab the headings to build the table of contents.
-  contentSelector: '.ck-editor__editable',
-  // Which headings to grab inside of the contentSelector element.
-  headingSelector: 'h2, h3, h4',
-  // For headings inside relative or absolute positioned containers within content.
-  hasInnerContainers: true,
-  headingsOffset: 40,
-  scrollSmoothOffset: -80
-});
-});
-</script>
+<script src="/js/tocbot.call.js"></script>
 @endsection
