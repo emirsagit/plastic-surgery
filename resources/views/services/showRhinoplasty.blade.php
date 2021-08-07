@@ -18,23 +18,21 @@
         <div class="flex flex-col lg:flex-row items-end h-full">
             <div class="lg:w-1/2 w-full lg:pt-0">
                 <div class="aspect-w-16 aspect-h-9">
-                    <button aria-label="Rinoplasti Nedir? Video Linki" class="youtube" type="button">
-                        <img src="/img/efsane-video.jpg" alt="burun estetiği" width="1366" height="768"
-                            link="https://www.youtube.com/embed/dRtYqzYuUCI">
-                    </button>
+                    <a class="youtube" href="#">
+                        <img src="/img/efsane-video.jpg" alt="burun estetiği" width="1366" height="768" link="https://www.youtube.com/embed/dRtYqzYuUCI">
+                    </a>
                 </div>
             </div>
             <div class="lg:w-1/2 w-full">
                 <div class="aspect-w-16 aspect-h-9">
-                    <button aria-label="Burun Estetiği Nedir? Video Linki" class="youtube" type="button">
-                        <img src="/img/video-2.jpg" alt="rinoplasti" width="1366" height="768"
-                            link="https://www.youtube.com/embed/8uBfQulwvK4">
-                    </button>
+                    <a class="youtube" href="#">
+                        <img src="/img/video-2.jpg" alt="rinoplasti" width="1366" height="768" link="https://www.youtube.com/embed/8uBfQulwvK4">
+                    </a>
                 </div>
             </div>
         </div>
     </div>
- 
+
     <div class="flex lg:flex-row flex-col lg:px-20">
 
         @include('services.partials.rhinoplasty.rhinoplastyBody')

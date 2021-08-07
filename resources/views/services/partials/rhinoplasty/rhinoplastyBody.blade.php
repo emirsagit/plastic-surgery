@@ -1,4 +1,4 @@
-<div class="lg:px-4 lg:w-8/12 text-justify">
+<div class="lg:px-4 lg:w-8/12 text-justify pb-10">
     <div class="px-6 lg:px-0 ck-editor__editable" id="pharagraph">
 
         @if ($images->count())

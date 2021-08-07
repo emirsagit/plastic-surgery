@@ -26,7 +26,7 @@ class ServicesController extends Controller
 
         return view('services.show', [
             'service' => $service,
-            'images' => $service->images()->latest()->take(3)->get(),
+            'images' => $service->getImages(),
             'relateds' => !$service->parentService ? $service->children->shuffle()->take(3) : $service->parentService->children->except(['id', $service->id])->shuffle()->take(3),
         ]);
     }

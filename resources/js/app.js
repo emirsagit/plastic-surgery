@@ -17,12 +17,12 @@ function videoDisplayToggle() {
 }
 
 function hideVideo() {
-    console.log("burada");
     videoWrapper.innerHTML = "";
     videoDisplayToggle();
 }
 
 function showVideo(e) {
+    e.preventDefault();
     videoWrapper.innerHTML = `<iframe src="${e.target.getAttribute(
         "link"
     )}?autoplay=1&playsinline=1"

@@ -47,11 +47,19 @@ class Service extends Model
 
     public function images()
     {
-        return $this->morphToMany(Image::class, 'imageable'); 
-    } 
+        return $this->morphToMany(Image::class, 'imageable');
+    }
 
     public function isParent()
     {
         return ($this->parentService ? false : true);
-    } 
+    }
+
+    public function getImages()
+    {
+        if (!count($this->images) && $this->parentService) {
+            return $this->parentService->images()->latest()->take(3)->get();
+        }
+        return $this->images()->latest()->take(3)->get();
+    }
 }

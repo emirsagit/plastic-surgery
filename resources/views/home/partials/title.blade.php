@@ -4,17 +4,14 @@
                         <h1 class="text-2xl lg:text-4xl uppercase font-extrabold pt-8 pb-4 text-orange">
                                 {{ __('Op. Dr. Hayati Kale') }}</h1>
                         <p class="lg:px-20 px-8 lg:text-center text-sm lg:text-md text-left text-white pb-8">
-                                {!! __('home.content') !!} <a
-                                        class="text-blue-400 hover:text-blue-500 text-sm cursor-pointer"
-                                        href="{{ '/' . app()->getLocale() . '/' .   trans('routes.about') }}">{{ __('Devamı için tıklayınız') }}-></a>
+                                {!! __('home.content') !!} <a class="text-blue-400 hover:text-blue-500 text-sm cursor-pointer" href="{{ '/' . app()->getLocale() . '/' .   trans('routes.about') }}">{{ __('Devamı için tıklayınız') }}-></a>
                         </p>
                 </div>
                 <div class="lg:w-1/2 w-full">
                         <div class="aspect-w-16 aspect-h-9">
-                                <button aria-label="Rinoplasti Nedir? Video Linki" class="youtube" type="button">
-                                        <img src="/img/efsane-video.jpg" alt="burun estetiği" width="1366" height="768"
-                                                link="https://www.youtube.com/embed/dRtYqzYuUCI">
-                                </button>
+                                <a  class="youtube" href="#">
+                                        <img src="/img/efsane-video.jpg" alt="burun estetiği" width="1366" height="768" link="https://www.youtube.com/embed/dRtYqzYuUCI">
+                                </a>
                         </div>
                 </div>
         </div>
@@ -22,19 +19,16 @@
         <div class="flex flex-col lg:flex-row items-center">
                 <div class="lg:w-1/2 w-full">
                         <div class="aspect-w-16 aspect-h-9">
-                                <button aria-label="Burun Estetiği Nedir? Video Linki" class="youtube" type="button">
-                                        <img src="/img/video-2.jpg" alt="rinoplasti" width="1366" height="768"
-                                                link="https://www.youtube.com/embed/8uBfQulwvK4">
-                                </button>
+                                <a class="youtube" href="#">
+                                        <img src="/img/video-2.jpg" alt="rinoplasti" width="1366" height="768" link="https://www.youtube.com/embed/8uBfQulwvK4">
+                                </a>
                         </div>
                 </div>
                 <div class="lg:w-1/2 w-full">
                         <div class="aspect-w-16 aspect-h-9">
-                                <button aria-label="Burun Estetiği Hakkında Merak Edilenleri Yanıtladık Video linki"
-                                        class="youtube" type="button">
-                                        <img src="/img/video-1.jpg" alt="Burun Estetiği" width="1366" height="768"
-                                                link="https://www.youtube.com/embed/Vh11xcWWc7c">
-                                </button>
+                                <a class="youtube" href="#">
+                                        <img src="/img/video-1.jpg" alt="Burun Estetiği" width="1366" height="768" link="https://www.youtube.com/embed/Vh11xcWWc7c">
+                                </a>
                         </div>
                 </div>
         </div>

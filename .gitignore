@@ -11,4 +11,5 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
-/resources/views/layouts/shared/pixel.blade.php
+/resources/views/layouts/shared/tagBody.blade.php
+/resources/views/layouts/shared/tagHead.blade.php

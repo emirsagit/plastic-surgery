@@ -14,12 +14,15 @@ class GalleryController extends Controller
     {
         if ($request->service && $request->service != 'all') {
             $service = Service::where('slug', $request->service)->first();
-            $this->seo($service);
             $images = $service->images()->latest()->paginate(30);
-            if (! $images && ($parent = $service->parent_service)->count() > 0) {
-                $images = $parent->images()->paginate(30);
+            if (count($images) <= 5 && $service->parentService) {
+                $images = $service->parentService->images()->latest()->paginate(30);
+                $service = $service->parentService;
             }
+
             $images->load('services');
+
+            $this->seo($service);
 
             return view('gallery.index', [
                 'images' => $images,

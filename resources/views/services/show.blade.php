@@ -11,7 +11,7 @@
             <div class="flex flex-row justify-evenly mb-8 mt-4">
                 @include('layouts.shared.telephoneAndOnlineLinks')
             </div>
-            <h1 class="text-4xl text-gray-800 font-extrabold text-center px-2 uppercase">
+            <h1 class="text-2xl lg:text-4xl text-gray-800 font-extrabold text-center px-2 uppercase">
                 {{ $service->title }}
             </h1>
         </div>

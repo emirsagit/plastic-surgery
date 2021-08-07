@@ -16,7 +16,7 @@
                         <h2 class="text-blue-600 text-xl mb-4">Not: Önce Yazının Dilini Seçiniz. Dil değiştirildiğinde
                             içerik sıfırlanabilir.</h2>
                         <label class="block text-gray-600 dark:text-gray-200 text-sm font-medium mb-2">Dil</label>
-                        <select name="language" id="selectedLanguage" onchange="location.reload()"
+                        <select name="language" id="selectedLanguage"
                             class="bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-gray-300 dark:border-gray-600 rounded py-2 px-4 block w-full focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring @error('language') border-red-500 @enderror"
                             value="{{ old('language') }}">
                             <option value="tr" @if (old('language')==="tr" ) selected @endif>Türkçe</option>

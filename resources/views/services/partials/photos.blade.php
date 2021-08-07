@@ -1,6 +1,6 @@
 @if ($images->count())
 
-<p class="text-center text-xl lg:text-2xl text-red-700 font-bold px-4" id="galeri">
+<p class="text-center text-xl lg:text-2xl text-red-700 font-bold px-4 pt-6" id="galeri">
     {{ ucwords($service->title) . ' ' . __('Fotoğraflar') }}
 </p>
 

@@ -16,6 +16,7 @@ mix.js('resources/js/app.js', 'public/js').postCss('resources/css/app.css', 'pub
     require('tailwindcss'),
     require('autoprefixer'),
 ]);
+
 mix.browserSync('plastic.test'); 
 
 if (mix.inProduction()) {
