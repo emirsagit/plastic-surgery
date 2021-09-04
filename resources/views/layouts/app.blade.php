@@ -8,7 +8,8 @@
   <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png" />
   <!-- Styles -->
   <link href="{{ asset('css/fonts.css') }}" rel="preload" as="font">
-  <link rel="stylesheet" href="{{asset(mix('/css/app.css'))}}">
+  {{-- <link rel="stylesheet" href="{{asset(mix('/css/app.css'))}}"> --}}
+  <link rel="stylesheet" href="{{asset('/css/app.css')}}">
   <link rel="stylesheet" href="{{asset('/css/splide.min.css')}}">
   <meta name="csrf-token" content="{{ csrf_token() }}" />
   {!! SEO::generate(true) !!}

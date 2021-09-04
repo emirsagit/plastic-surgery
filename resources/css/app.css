@@ -4,7 +4,6 @@
 div.ck-editor__editable a {
     @apply text-blue-600;
     cursor: pointer;
-    @apply hover:text-blue-800
 }
 
 html {
@@ -253,6 +252,16 @@ body {
     background-size: cover;
 }
 
+.bg-press {
+    background: rgb(0, 48, 73);
+    background: url("/img/press-hayati-kale.png") no-repeat center center, linear-gradient(180deg, rgba(0,48,73,1) 11%, rgba(13,59,82,1) 32%, rgba(24,68,90,1) 47%, rgba(59,96,115,1) 80%);
+    background-size: cover;
+}
+
+.press-border {
+    border: #003049 solid 4px;
+}
+
 .bg-soft-gray-height {
     height: 40rem;
 }
@@ -408,5 +417,14 @@ iframe {
         margin: 0px 0 -1068px 0;
         background: transparent;
         /* you'll need this if #container's parent element has a different background from #container itself */
+    }
+    .bg-press {
+        background-size: contain;
+    }
+}
+
+@media (min-width: 850px) {
+    .bg-press {
+        background-size: contain;
     }
 }

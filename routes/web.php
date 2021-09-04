@@ -1,16 +1,17 @@
 <?php
 
-use App\Http\Controllers\AdminMediaController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Request;
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PressController;
+use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\ServicesController;
+use App\Http\Controllers\AdminMediaController;
 use App\Http\Controllers\LocalizationController;
 use App\Http\Controllers\AdminServicesController;
 use App\Http\Controllers\OnlineAppointmentController;
 use App\Http\Controllers\AdminNotificationsController;
-use App\Http\Controllers\BlogController;
-use App\Http\Controllers\GalleryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -53,6 +54,7 @@ foreach (config('localization.languages') as $locale) {
         Route::get(trans('routes.contact'), [HomeController::class, 'contact']);
         Route::get(trans('routes.services'), [ServicesController::class, 'index']);
         Route::get(trans('routes.blog'), [BlogController::class, 'index']);
+        Route::get(trans('routes.press'), [PressController::class, 'index']);
         Route::get(trans('routes.gallery'), [GalleryController::class, 'index'])->name('gallery');
     });
 };

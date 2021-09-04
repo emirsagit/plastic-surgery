@@ -4,7 +4,8 @@ return [
     'services' => 'services', 
     'contact' => 'contact',
     'blog' => 'blog',
-    'gallery' => 'galeri'
+    'gallery' => 'galeri',
+    'press' => 'we-in-press'
 ]
 
 

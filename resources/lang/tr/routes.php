@@ -5,6 +5,7 @@ return [
     'contact' => 'iletisim',
     'blog' => 'blog',
     'gallery' => 'galeri',
+    'press' => 'basinda-biz'
 ]
 
 
