@@ -1,9 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\Request;
-use App\Http\Controllers\BlogController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\PressController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\ServicesController;
@@ -53,12 +52,12 @@ foreach (config('localization.languages') as $locale) {
         Route::get(trans('routes.about'), [HomeController::class, 'about']);
         Route::get(trans('routes.contact'), [HomeController::class, 'contact']);
         Route::get(trans('routes.services'), [ServicesController::class, 'index']);
-        Route::get(trans('routes.blog'), [BlogController::class, 'index']);
+        Route::get(trans('routes.post'), [PostController::class, 'index']);
         Route::get(trans('routes.press'), [PressController::class, 'index']);
         Route::get(trans('routes.gallery'), [GalleryController::class, 'index'])->name('gallery');
     });
 };
-    
+
 app()->setLocale($currentLocale);
 /* some tr routes withoud tr for seo*/
 Route::get('/language/{locale}', [LocalizationController::class, 'index']);

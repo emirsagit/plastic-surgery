@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Image;
 use App\Models\Service;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use Artesaos\SEOTools\Facades\SEOMeta;
 use Artesaos\SEOTools\Facades\SEOTools;
+use Illuminate\Support\Facades\Storage;
 
 class ServicesController extends Controller
 {
@@ -41,9 +41,10 @@ class ServicesController extends Controller
 
         $this->seo($service);
 
-         return view('services.showRhinoplasty', [
+        return view('services.showRhinoplasty', [
             'service' => $service,
             'images' => $service->images()->latest()->take(3)->get(),
+            'faqs' => json_decode(Storage::disk('local')->get('faqs.json')),
             'relateds' => !$service->parentService ? $service->children->shuffle()->take(3) : $service->parentService->children->except(['id', $service->id])->shuffle()->take(3),
         ]);
     }
@@ -77,7 +78,7 @@ class ServicesController extends Controller
             }
         }
         SEOTools::opengraph()->setUrl('https://www.hayatikale.com');
-        SEOTools::opengraph()->addProperty('type', 'website');
+        SEOTools::opengraph()->addProperty('type', 'article');
         SEOTools::jsonLd()->addImage('https://www.hayatikale.com/img/hayati-kale-profile.png');
     }
 }

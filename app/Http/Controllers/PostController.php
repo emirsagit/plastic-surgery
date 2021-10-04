@@ -4,11 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class BlogController extends Controller
+class PostController extends Controller
 {
     public function index()
     {
         $blogs = array();
         return view('blog.index', compact('blogs'));
-    } 
+    }
 }

@@ -6,6 +6,10 @@ div.ck-editor__editable a {
     cursor: pointer;
 }
 
+div.ck-editor__editable .faqs {
+    @apply text-white;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -252,9 +256,13 @@ body {
     background-size: cover;
 }
 
+.bg-navy-blue {
+    background: rgb(0, 48, 73);
+}
+
 .bg-press {
     background: rgb(0, 48, 73);
-    background: url("/img/press-hayati-kale.png") no-repeat center center, linear-gradient(180deg, rgba(0,48,73,1) 11%, rgba(13,59,82,1) 32%, rgba(24,68,90,1) 47%, rgba(59,96,115,1) 80%);
+    background: url("/img/press-hayati-kale.png") no-repeat center center, linear-gradient(180deg, rgba(0, 48, 73, 1) 11%, rgba(13, 59, 82, 1) 32%, rgba(24, 68, 90, 1) 47%, rgba(59, 96, 115, 1) 80%);
     background-size: cover;
 }
 

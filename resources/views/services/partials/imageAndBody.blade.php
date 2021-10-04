@@ -1,4 +1,4 @@
-<div class="lg:px-4 lg:w-8/12 text-justify">
+<article class="lg:px-4 lg:w-8/12 text-justify">
     @if($service->image)
     <img src="{{ $service->image }}" alt="{{ $service->alt }}" width="1080" height="1080" class="shadow-lg rounded">
     @endif
@@ -11,4 +11,4 @@
         @endif
         {!! $service->body !!}
     </div>
-</div>
+</article>

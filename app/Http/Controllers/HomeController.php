@@ -43,8 +43,8 @@ class HomeController extends Controller
             SEOTools::setTitle('Op. Dr. Hayati Kale | Burun estetiği, Botox, Yüz-Dudak Dolgusu');
             SEOTools::setDescription("Op. Dr. Hayati Kale - Burun estetiği (Rhinoplasty), Botox, Yüz-Dudak Dolgusu, KBB Hastalıkları. Daha iyi nefes alırken daha güzel görünmek ister misiniz?");
         } elseif (App::isLocale('en')) {
-            SEOTools::setTitle('Surgeon Dr. Hayati Kale | Rhinoplasty, Botox, Face-Lip Filling');
-            SEOTools::setDescription('Surgeon Dr. Hayati Kale - Rhinoplasty, Botox, Face-Lip Filling, ENT Diseases. Do you want to look more beautiful while breathing better? Location: Istanbul');
+            SEOTools::setTitle('Hayati Kale, M.D. | Rhinoplasty, Botox, Face-Lip Filling');
+            SEOTools::setDescription('Hayati Kale, M.D. - Rhinoplasty, Botox, Face-Lip Filling, ENT Diseases. Do you want to look more beautiful while breathing better? Location: Istanbul');
         }
         SEOTools::opengraph()->setUrl('https://www.hayatikale.com');
         SEOMeta::addAlternateLanguage("tr", 'https://www.hayatikale.com');
@@ -59,8 +59,8 @@ class HomeController extends Controller
             SEOTools::setTitle('Dr. Hayati Kale, M.D. | İletişim Bilgileri');
             SEOTools::setDescription("Dr. Hayati Kale, M.D. - Burun estetiği (Rhinoplasty), Botox, Yüz-Dudak Dolgusu, KBB Hastalıkları. İletişim ve randevu bilgileri için tıklayınız");
         } elseif (App::isLocale('en')) {
-            SEOTools::setTitle('Dr. Hayati Kale, M.D.  | Contact Information');
-            SEOTools::setDescription('Dr. Hayati Kale, M.D. - Rhinoplasty, Botox, Face-Lip Filling, ENT Diseases. Click for contact and appointment information - Istanbul');
+            SEOTools::setTitle('Op. Dr. Hayati Kale  | Contact Information');
+            SEOTools::setDescription('Op. Dr. Hayati Kale - Rhinoplasty, Botox, Face-Lip Filling, ENT Diseases. Click for contact and appointment information - Istanbul');
         }
         SEOTools::opengraph()->setUrl('https://www.hayatikale.com');
         SEOMeta::addAlternateLanguage("tr", 'https://www.hayatikale.com/tr/iletisim');

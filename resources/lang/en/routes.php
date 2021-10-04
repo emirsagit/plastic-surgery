@@ -3,7 +3,7 @@ return [
     'about' => 'about',
     'services' => 'services', 
     'contact' => 'contact',
-    'blog' => 'blog',
+    'post' => 'blog',
     'gallery' => 'galeri',
     'press' => 'we-in-press'
 ]

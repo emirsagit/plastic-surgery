@@ -10,19 +10,19 @@
             @if($service->image)
             <img src="{{ $service->image }}" alt="{{ $service->alt }}" width="1080" height="1080" loading="lazy">
             @endif
-            <div class="bg-{{ $colors[$i] }} h-5 w-full lg:-mt-8 -mt-5 opacity-40 transform z-10 
+            <div class="bg-{{ $colors[$i] }} h-8 w-full lg:-mt-8 -mt-5 opacity-40 transform z-10 
         @if($i % 2 == 0) rotate-3 @else -rotate-3 @endif"></div>
             <div
                 class="bg-{{ $colors[$i] }} h-5 w-full transform z-10 @if($i % 2 == 0) rotate-3 @else -rotate-3 @endif">
             </div>
             <h3
-                class="pl-3 py-2 pr-1 font-bold text-gray-100 capitalize hover:text-gray-800 transition duration-500 ease-in-out">
+                class="pl-3 py-2 pr-1 font-bold text-gray-100 capitalize hover:text-gray-800 transition duration-300 ease-in-out">
                 {{ $service->title }}</h3>
         </a>
         <div class="flex flex-col divide-y divide-light-blue-400 px-3">
             @foreach ($service->children as $child)
             <a href="{{ route('services.show', $child) }}"
-                class="py-1 text-sm text-gray-100 hover:text-gray-800 transition duration-500 ease-in-out capitalize">{{ $child->title }}</a>
+                class="py-1 text-sm text-gray-100 hover:text-gray-800 transition duration-300 ease-in-out capitalize">{{ $child->title }}</a>
             @endforeach
         </div>
     </div>

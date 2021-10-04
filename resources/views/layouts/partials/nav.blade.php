@@ -26,7 +26,7 @@
     </li>
     <li class="flex items-center  rounded pl-4 lg:pl-0">
       <a class="text-white px-3 py-2 lg:py-3 flex items-center text-sm lg:text-md  uppercase font-bold"
-        href="{{ '/' . app()->getLocale() . '/' .   trans('routes.blog') }}">{{ __('Blog') }}</a>
+        href="{{ '/' . app()->getLocale() . '/' .   trans('routes.post') }}">{{ __('Blog') }}</a>
     </li>
     <li class="flex items-center  rounded pl-4 lg:pl-0">
       <a class="text-white px-3 py-2 lg:py-3 flex items-center text-sm lg:text-md  uppercase font-bold"

@@ -3,10 +3,9 @@ return [
     'about' => 'hakkimizda',
     'services' => 'Uzmanlıklar',
     'contact' => 'iletisim',
-    'blog' => 'blog',
+    'post' => 'blog',
     'gallery' => 'galeri',
     'press' => 'basinda-biz'
 ]
-
 
 ?>
