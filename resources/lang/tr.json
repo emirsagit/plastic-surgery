@@ -47,9 +47,9 @@
     "Whoops, something went wrong on our servers.": "Ops, sunucularımızda bir şeyler ters gitti.",
     "yesterday": "dünden",
     "Rhinoplasty": "Rinoplasti",
-    "Devamı için tıklayınız" : "Devamı",
-    "İstanbul Burun Estetiği" : "İstanbul Burun Estetiği",
-    "İstanbul Yüz Estetik Cerrahisi" : "İstanbul Yüz Estetik Cerrahisi",
+    "Devamı için tıklayınız": "Devamı",
+    "İstanbul Burun Estetiği": "İstanbul Burun Estetiği",
+    "İstanbul Yüz Estetik Cerrahisi": "İstanbul Yüz Estetik Cerrahisi",
     "Op. Dr. Hayati Kale Kimdir?": "Op. Dr. Hayati Kale Kimdir?",
     "Özel Olarak İlgilendiği Konular:": "Özel Olarak İlgilendiği Konular:",
     "İletişim bilgilerimizi kullanarak bize ulaşabilirsiniz": "İletişim bilgilerimizi kullanarak bize ulaşabilirsiniz.",
@@ -69,5 +69,7 @@
     "Op. Dr. Hayati Kale": "Op. Dr. Hayati Kale",
     "Daha Fazla": "Daha Fazla",
     "Yukleniyor...": "Yükleniyor...",
-    "Geri": "Geri"
+    "Geri": "Geri",
+    "Thank you": "Randevu kaydınız oluşturuldu. Mümkün olan en kısa sürede size ulaşacağız.",
+    "Thank you title": "Teşekkürler..."
 }

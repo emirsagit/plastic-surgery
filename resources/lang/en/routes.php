@@ -1,12 +1,10 @@
-<?php 
+<?php
 return [
     'about' => 'about',
-    'services' => 'services', 
+    'services' => 'services',
     'contact' => 'contact',
     'post' => 'blog',
     'gallery' => 'galeri',
-    'press' => 'we-in-press'
-]
-
-
-?>
+    'press' => 'we-in-press',
+    'thanks' => 'thanks'
+];

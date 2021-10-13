@@ -42,7 +42,6 @@ Route::prefix('admin')->middleware(['auth', 'admin'])->group(function () {
     ]);
 });
 /* endadmin */
-
 Route::post('/appointment', [OnlineAppointmentController::class, 'store'])->name('appointment');
 
 foreach (config('localization.languages') as $locale) {
@@ -51,6 +50,7 @@ foreach (config('localization.languages') as $locale) {
         Route::get('/', [HomeController::class, 'index']);
         Route::get(trans('routes.about'), [HomeController::class, 'about']);
         Route::get(trans('routes.contact'), [HomeController::class, 'contact']);
+        Route::get(trans('routes.thanks'), [OnlineAppointmentController::class, 'index']);
         Route::get(trans('routes.services'), [ServicesController::class, 'index']);
         Route::get(trans('routes.post'), [PostController::class, 'index']);
         Route::get(trans('routes.press'), [PressController::class, 'index']);

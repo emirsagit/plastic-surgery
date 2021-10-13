@@ -40,12 +40,9 @@
                       lazyLoad : 'nearby',
                       perPage: 3,
                       gap: '1em',
-                      cover : true,
-                      heightRatio: 0.3,
                       breakpoints: {
                       1024: {
-                      perPage: 1,
-                      heightRatio: 1,
+                      perPage: 1
                       },
                 }
     }).mount();

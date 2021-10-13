@@ -5,7 +5,8 @@ return [
     'contact' => 'iletisim',
     'post' => 'blog',
     'gallery' => 'galeri',
-    'press' => 'basinda-biz'
+    'press' => 'basinda-biz',
+    'thanks' => 'tesekkurler'
 ]
 
 ?>
