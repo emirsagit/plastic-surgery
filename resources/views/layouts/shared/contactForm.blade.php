@@ -1,5 +1,4 @@
-<form method="POST" @submit.prevent="submitData" x-data="contactForm()" class="z-20 bg-gray-800 bg-opacity-75 p-4">
-    <p class="mb-2 mt-4 text-center mx-2 text-white">{{ __('İletişim Formu') }}</p>
+<form method="POST" @submit.prevent="submitData" x-data="contactForm()" class="max-w-xl mx-auto w-full">
     @csrf
     <input name="local" id="local" type="hidden" value={{ app()->getLocale() }}>
     <div class="mb-2">
@@ -14,7 +13,7 @@
     </div>
 
     <div class="mb-2">
-        <label class="block text-white text-sm font-bold mb-2" for="telefon">
+        <label class="block text-white text-sm font-bold mb-2" for="tel">
             {{ __('Telefon') }}
         </label>
         <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" :class="{ 'border-red-500': errors.tel }" name="tel" id="tel" type="tel" placeholder="{{ __('Telefon') }}" @keydown="errors.tel = false"
@@ -25,7 +24,7 @@
     </div>
 
     <div class="mb-2">
-        <label class="block text-white text-sm font-bold mb-2" for="Date">
+        <label class="block text-white text-sm font-bold mb-2" for="email">
             {{ __('E-Mail Address') }}
         </label>
         <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" :class="{ 'border-red-500': errors.email }" name="email" id="email" type="email" placeholder="{{ __('E-Mail Address') }}" @click="errors.email = false"
@@ -49,7 +48,7 @@
         <p class="text-white bg-green-500 p-2 mb-4 font-bold text-lg rounded" x-text="message"></p>
     </template>
     <div class="flex items-center lg:pb-4 justify-center">
-        <button id="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 mt-4 px-4 rounded focus:outline-none focus:shadow-outline mb-4 disabled:opacity-50 mr-2" :disabled="loading" type="submit">
+        <button id="submit" class="bg-blue-800 hover:bg-blue-900 text-white font-bold py-2 mt-4 px-4 rounded focus:outline-none focus:shadow-outline mb-4 disabled:opacity-50 mr-2" :disabled="loading" type="submit">
             <template x-if="!loading">
                 <span>
                     {{ __('Gönder') }}
@@ -72,13 +71,16 @@ formData: {
   tel: '',
   body: '',
   email: '',
-  local: ''
+  local: '',
+  price_request: false
 },
 message: false,   
 loading: false,
 errors: "",
 submitData() {
+    console.log(document.getElementById('price_request'));
     this.formData.local = document.getElementById('local').value;
+    this.formData.price_request = document.getElementById('price_request') ? true : false;
     this.message = false;
     this.loading = true;
     this.errors = "";

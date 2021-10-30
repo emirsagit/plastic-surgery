@@ -1,9 +1,5 @@
 <aside class="mx-4 lg:w-4/12" x-data="{ showSummary: '' }">
 
-    <div class="flex-col items-center justify-center hidden lg:flex">
-        @include('layouts.shared.contactForm')
-    </div>
-
     <div class="fixed transform flex flex-row items-center -rotate-90 text-white left-0 bottom-60 z-20 -ml-12 font-bold px-1 bg-blue-800 tex-sm tracking-wider cursor-pointer select-none"
         x-on:click="showSummary = 'true'" @click.away="showSummary = ''">
         <p class="p-1">{{ __('İçindekiler') }}</p>

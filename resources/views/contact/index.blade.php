@@ -13,12 +13,12 @@
     <div class="flex flex-col lg:flex-row justify-between pb-10 w-4/5">
       <div class="flex flex-col lg:ml-10 lg:justify-center p-4 lg:py-0 lg:w-1/2">
         <div class="flex flex-col">
-          <p class="pb-4 text-sm text-gray-100">{{ __('İletişim Bilgilerimiz:') }}</p>
+          <p class="pb-4 text-2xl text-gray-100">{{ __('İletişim Bilgilerimiz:') }}</p>
           @include('layouts.shared.contactInformation')
         </div>
 
         <div class="flex flex-col mt-6">
-          <p class="text-sm text-gray-200 pb-4">{{ __('Sosyal Medya Hesaplarımız:') }}</p>
+          <p class="text-2xl text-gray-200 pb-4">{{ __('Sosyal Medya Hesaplarımız:') }}</p>
           <div class="flex flex-row">
             @include('layouts.shared.social')
           </div>
@@ -28,7 +28,7 @@
       <div class="relative lg:w-1/2">
         <div class="absolute z-0 w-40 h-40 rounded-full bg-purple-500 -right-24 -top-20"></div>
         <div class="absolute z-0 w-40 h-40 rounded-full bg-purple-500 -left-24 -bottom-20"></div>
-
+        <p class="mb-2 lg:mt-4 mt-8 text-2xl text-center mx-2 text-white">{{ __('İletişim Formu') }}</p>
         @include('layouts.shared.contactForm')
       </div>
     </div>

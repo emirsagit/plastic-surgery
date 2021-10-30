@@ -41,7 +41,7 @@ class OnlineAppointmentNotification extends Notification
     public function toArray($notifiable)
     {
         return [
-            'name' => $this->request->name,
+            'name' => $this->request->name . ($this->request->price_request ? " Fiyat Bilgisi Almak İstiyor" : " İletişime geçmek istiyor."),
             'tel' => $this->request->tel,
             'email' => $this->request->email,
             'date' => $this->request->date,
@@ -58,7 +58,7 @@ class OnlineAppointmentNotification extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage)
-            ->line($this->request->name . ' iletişime geçmek istiyor.')
+            ->line($this->request->name . ($this->request->price_request ? " Fiyat Bilgisi Almak İstiyor" : " İletişime geçmek istiyor."))
             ->line('Telefonu: ' . $this->request->tel)
             ->line('Belirtilmişse Mail Adresi: ' . $this->request->email)
             ->line('Randevu Talebi Olduğunu Belirtmişse Tarihi: ' . $this->request->date)

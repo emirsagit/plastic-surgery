@@ -10,5 +10,10 @@
         </div>
         {!! $service->body !!}
     </div>
+    <div class="flex-col flex my-2 z-20 bg-gray-900 bg-opacity-75 p-4">
+        <p class="text-yellow-400 font-bold text-2xl lg:text-3xl tracking-wide text-center mt-2 mb-6">{{ __('Fiyat bilgisi') }}</p>
+        <input type="hidden" value="price" id="price_request">
+        @include('layouts.shared.contactForm')
+    </div>
     @include("services.partials.rhinoplasty.rhinoplastyAccordion")
 </article>

@@ -27,7 +27,7 @@ class ServicesController extends Controller
         return view('services.show', [
             'service' => $service,
             'images' => $service->getImages(),
-            'relateds' => !$service->parentService ? $service->children->shuffle()->take(3) : $service->parentService->children->except(['id', $service->id])->shuffle()->take(3),
+            'relateds' => !$service->parentService ? $service->children->shuffle()->take(2) : $service->parentService->children->except(['id', $service->id])->shuffle()->take(2),
         ]);
     }
 
@@ -43,9 +43,9 @@ class ServicesController extends Controller
 
         return view('services.showRhinoplasty', [
             'service' => $service,
-            'images' => $service->images()->latest()->take(3)->get(),
+            'images' => $service->images()->latest()->take(2)->get(),
             'faqs' => json_decode(Storage::disk('local')->get('faqs.json')),
-            'relateds' => !$service->parentService ? $service->children->shuffle()->take(3) : $service->parentService->children->except(['id', $service->id])->shuffle()->take(3),
+            'relateds' => !$service->parentService ? $service->children->shuffle()->take(2) : $service->parentService->children->except(['id', $service->id])->shuffle()->take(2),
         ]);
     }
 

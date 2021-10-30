@@ -4,7 +4,7 @@
 </p>
 <div class="w-full flex flex-row justify-center relative">
     @forelse ($relateds as $related)
-    <a class="lg:w-1/3 w-full justify-center flex flex-col shadow lg:mr-1 transform transition duration-500 hover:bg-gray-800 hover:bg-opacity-20"
+    <a class="lg:w-1/3 w-1/2 justify-center flex flex-col shadow lg:mr-1 transform transition duration-500 hover:bg-gray-800 hover:bg-opacity-20"
     href="{{ route('services.show', $related->slug) }}">
         <div class="relative inner-shadow">
             <img src="{{ $related->image }}" alt="{{ $related->alt }}" width="1080" height="1080" loading="lazy">
